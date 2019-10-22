@@ -2,12 +2,14 @@
     "users":[
         {
          "id": 1,
-         "username": "Phil",
+         "username": "phil",
+         "email": "phil@phil.com",
          "password": "123"
         },
         {
          "id": 2,
-         "username": "Bill",
+         "username": "bill",
+         "email": "bill@bill.com",
          "password": "456"
         }
     ],

@@ -5,10 +5,11 @@ class NavBar extends Component {
 
     handleLogout = () => {
         this.props.clearUser();
-        this.props.history.push('/');
+        this.props.history.push('/login');
     }
 
   render(){
+    console.log("something", this.props)
     return (
       <header>
         <h1 className="site-title">Ramen Site</h1>
@@ -19,7 +20,6 @@ class NavBar extends Component {
                 <li><Link className="nav-link" to="/favorites">Favorites</Link></li>
                 <li><span className="nav-link" onClick={this.handleLogout}>Logout</span></li>
             </>
-            }
           </ul>
         </nav>
       </header>

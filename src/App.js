@@ -4,6 +4,7 @@ import Login from "../src/components/auth/Login"
 import ApplicationViews from '../src/ApplicationViews'
 import NavBar from '../src/components/nav/NavBar'
 import './App.css';
+import Register from './components/auth/Register';
 
 class App extends Component {
     state = {
@@ -42,11 +43,14 @@ render() {
     <>
      {this.state.user ?
      <>
-       <NavBar clearUser ={this.clearUser}/>
+       <NavBar clearUser ={this.clearUser} {...this.props}/>
        <ApplicationViews userId={this.state.userId} />
     </>
     :
+    <>
     <Login setUser={this.setUser} />
+    <Register setUser={this.setUser} />
+    </>
     }
    </>
   )

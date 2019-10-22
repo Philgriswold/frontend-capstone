@@ -27,19 +27,17 @@ class Login extends Component {
       let credentials = { email: this.state.email, password: this.state.password }
       APIManager.searchUsername(this.state.email)
       .then(result => {
-        console.log("what is the result of search", result)
         if (result.length > 0){
           //this returns an array - we only need object
           this.props.setUser(result[0]);
-          this.props.history.push("/ordernow");
+          this.props.history.push("/shops");
         }else {
           APIManager.addUser(credentials)
           .then(result => {
             //this returns an object
-            console.log("result is", result);
             this.props.setUser(result);
           })
-          this.props.history.push("/ordernow");
+          this.props.history.push("/shops");
         }
       })
     }
@@ -65,6 +63,9 @@ class Login extends Component {
             <button type="submit">
               Sign in
               </button>
+              <button type="button" className="Register" onClick={this.newUser}>
+                            Register
+                        </button>
           </fieldset>
         </form>
   
