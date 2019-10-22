@@ -13,6 +13,8 @@ class Login extends Component {
   
     // Update state whenever an input field is edited
     handleFieldChange = (evt) => {
+      evt.persist()
+      console.log(evt)
       const stateToChange = {}
       stateToChange[evt.target.id] = evt.target.value
       this.setState(stateToChange)
@@ -28,6 +30,7 @@ class Login extends Component {
       APIManager.searchUsername(this.state.email)
       .then(result => {
         if (result.length > 0){
+          console.log(result)
           //this returns an array - we only need object
           this.props.setUser(result[0]);
           this.props.history.push("/shops");

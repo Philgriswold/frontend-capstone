@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:3002";
 
 export default {
     addUser(newUser) {
-        return fetch(`{remoteURL}/users`, {
+        return fetch(`${remoteURL}/users`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -13,8 +13,8 @@ export default {
     get(resource, id) {
         return fetch(`${remoteURL}/${resource}/${id}`).then(newObj => newObj.json());
   },
-    searchUsername(username) {
-        return fetch(`${remoteURL}/users?userName=${username}`)
+    searchUsername(email) {
+        return fetch(`${remoteURL}/users?email=${email}`)
        .then(e => e.json()
     )
   }

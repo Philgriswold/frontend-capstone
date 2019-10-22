@@ -1,19 +1,60 @@
 {
-    "users":[
-        {
-         "id": 1,
-         "username": "phil",
-         "email": "phil@phil.com",
-         "password": "123"
-        },
-        {
-         "id": 2,
-         "username": "bill",
-         "email": "bill@bill.com",
-         "password": "456"
-        }
-    ],
-    "Shops": [],
-    "Favorites": [],
-    "Reviews": []
+  "users": [
+    {
+      "id": 1,
+      "username": "phil",
+      "email": "phil@phil.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "username": "bill",
+      "email": "bill@bill.com",
+      "password": "456"
+    },
+    {
+      "user": "",
+      "email": "phil@phil.com",
+      "password": "ab",
+      "id": 3
+    },
+    {
+      "username": "",
+      "email": "phil@phil.com",
+      "password": "ab",
+      "id": 4
+    },
+    {
+      "username": "",
+      "email": "phil@phil.com",
+      "password": "ab",
+      "id": 5
+    },
+    {
+      "username": "",
+      "email": "jill@jill.com",
+      "password": "hey",
+      "id": 6
+    },
+    {
+      "email": "jane@jane.com",
+      "password": "jane",
+      "id": 7
+    },
+    {
+      "username": "",
+      "email": "ted@ted.com",
+      "password": "ted",
+      "id": 8
+    },
+    {
+      "username": "",
+      "email": "tammy@tammy.com",
+      "password": "tammy",
+      "id": 9
+    }
+  ],
+  "Shops": [],
+  "Favorites": [],
+  "Reviews": []
 }

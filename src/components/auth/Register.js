@@ -4,10 +4,10 @@ import APIManager from '../../APIManager';
 
 class Register extends Component {
     state = {
+        username: "",
         email: "",
         password: "",
         confirmpassword: "",
-        users: []
     }
 
     handleFieldChange = (evt) => {
@@ -18,6 +18,7 @@ class Register extends Component {
 
     handleRegister = (e) => {
         e.preventDefault()
+        let user = this.state.user;
         let email = this.state.email;
         let password = this.state.password;
         let confirmPassword = this.state.confirmpassword
@@ -25,14 +26,17 @@ class Register extends Component {
             alert("Passwords do not match")
         } else {
             let newUser = {
+                username:this.state.username,
                 email: this.state.email,
                 password: this.state.password,
             };
+            console.log("hey", newUser)
+
         APIManager.addUser(newUser).then(result => {
             this.setState({
-                userId: result.Id
+                userid: result.id
             })
-            this.props.setUser(result.Id);
+            this.props.setUser(result);
             this.props.history.push(`/shops`);
 
         })
@@ -54,7 +58,7 @@ class Register extends Component {
                     <input placeholder="Password" onChange={this.handleFieldChange} type="password" required="" autoFocus="" id="password" />
                 </div><div className="register field">
                     <label htmlFor="password">Confirm Password</label>
-                    <input placeholder="Confirm Password" onChange={this.handleFieldChange} type="password" required="" autoFocus="" id="confirm password" />
+                    <input placeholder="Confirm Password" onChange={this.handleFieldChange} type="password" required="" autoFocus="" id="confirmpassword" />
                 </div>
                 <button type="submit" className="register button" >Submit</button>
             </form>

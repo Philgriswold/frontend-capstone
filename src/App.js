@@ -24,7 +24,7 @@ setUser = (authObj) => {
   )
   this.setState({
     user: this.isAuthenticated(),
-    userId: authObj.Id
+    userid: authObj.id
   });
 }
 
