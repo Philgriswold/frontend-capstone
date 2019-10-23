@@ -62,6 +62,7 @@ class Register extends Component {
                 </div>
                 <button type="submit" className="register button" >Submit</button>
             </form>
+            <p onClick={this.props.hideReg}>Already have an account? Click to sign in</p>
             </>
         )
     }

@@ -52,6 +52,35 @@
       "email": "tammy@tammy.com",
       "password": "tammy",
       "id": 9
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 10
+    },
+    {
+      "username": "",
+      "email": "nate@nate.com",
+      "password": "nate",
+      "id": 11
+    },
+    {
+      "username": "",
+      "email": "fred@fred.com",
+      "password": "fred",
+      "id": 12
+    },
+    {
+      "username": "",
+      "email": "hey@hey.com",
+      "password": "hey",
+      "id": 13
+    },
+    {
+      "username": "",
+      "email": "sam@sam.com",
+      "password": "sam",
+      "id": 14
     }
   ],
   "Shops": [],

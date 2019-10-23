@@ -18,7 +18,9 @@ class NavBar extends Component {
              <>
                 <li><Link className="nav-link" to="/shops">Shops</Link></li>
                 <li><Link className="nav-link" to="/favorites">Favorites</Link></li>
-                <li><span className="nav-link" onClick={this.handleLogout}>Logout</span></li>
+                {/* <li><button className="nav-link" onClick={this.handleLogout}>Logout</button></li> */}
+                {/* <li><button size='small' onClick={this.handleLogout}>Logout</button></li> */}
+                <li><Link className="nav-link" onClick={this.handleLogout}>Logout</Link></li>
             </>
           </ul>
         </nav>

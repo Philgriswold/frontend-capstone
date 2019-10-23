@@ -4,7 +4,7 @@ import Login from "../src/components/auth/Login"
 import ApplicationViews from '../src/ApplicationViews'
 import NavBar from '../src/components/nav/NavBar'
 import './App.css';
-import Register from './components/auth/Register';
+
 
 class App extends Component {
     state = {
@@ -14,11 +14,11 @@ class App extends Component {
         //  user: localStorage.getItem("credentials") !== null,
         //  userId: localStorage.getItem("credentials") !== null ? JSON.parse(localStorage.getItem("credentials")).id : false
 
-isAuthenticated = () => localStorage.getItem("credentials") !== null
+isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
 
 setUser = (authObj) => {
-  localStorage.setItem(
+  sessionStorage.setItem(
     "credentials",
     JSON.stringify(authObj)
   )
@@ -41,16 +41,17 @@ clearUser = () => {
 render() {
   return(
     <>
-     {this.state.user ?
+     {this.state.user ? (
      <>
        <NavBar clearUser ={this.clearUser} {...this.props}/>
        <ApplicationViews userId={this.state.userId} />
     </>
-    :
+     ) : (
     <>
     <Login setUser={this.setUser} />
-    <Register setUser={this.setUser} />
+
     </>
+     )
     }
    </>
   )

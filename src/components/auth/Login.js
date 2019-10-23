@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { withRouter } from "react-router-dom"
+import { withRouter } from "react-router-dom";
 import APIManager from '../../APIManager';
+import Register from './Register';
 // import ReactModalLogin from "react-modal-login";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
  
@@ -8,7 +9,14 @@ class Login extends Component {
     // Set initial state
     state = {
       email: "",
-      password: ""
+      password: "",
+      hideReg : true
+    }
+    showReg= () => {
+      this.setState({ hideReg: false});
+    }
+    hideReg = () => {
+      this.setState({ hideReg: true});
     }
   
     // Update state whenever an input field is edited
@@ -47,6 +55,8 @@ class Login extends Component {
   
     render() {
       return (
+        <>
+          {this.state.hideReg && (
         <form onSubmit={this.handleLogin}>
           <fieldset>
             <h3>Please sign in</h3>
@@ -66,12 +76,14 @@ class Login extends Component {
             <button type="submit">
               Sign in
               </button>
-              <button type="button" className="Register" onClick={this.newUser}>
-                            Register
-                        </button>
-          </fieldset>
+              <p htmlFor="register" onClick={this.showReg}>Not registered? Click here</p>
+           </fieldset>
         </form>
-  
+          )}
+          {!this.state.hideReg && (
+      <Register setUser={this.props.setUser} hideReg={this.hideReg} />
+          )}
+      </>
       )
     }
   }
