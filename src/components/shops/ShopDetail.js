@@ -1,19 +1,39 @@
-import React, { Component } from "react";
-import AnimalManager from "../../modules/AnimalManager";
-import "./AnimalDetail.css";
-import { Route, withRouter, Redirect } from "react-router-dom";
-import APIManager from "../../APIManager";
+import React, { Component } from 'react'
+import ShopCard from './ShopCard'
+import APIManager from '../../APIManager'
 
 class ShopDetail extends Component {
     state = {
-        name: "",
-        address: "",
-        details: "",
-    };
+        shops: [],
+        address: [],
+        details: []
+    }
 
-componentDidMount() {
-    APIManager.get(this.props.shopId).then(shop => { 
+componentDidMount(){
+    APIManager.getShop()
+    .then((shops) => {
+        console.log("shops", shops)
         this.setState({
-        shops: shops
-    })},
+            shops: shops,
+            address: address,
+            details: details
+        })
+    })
 }
+
+render(){
+    return(
+        <>
+        <h1>HELLO WORLD</h1>
+        {this.state.shops.map(shops => (
+            <ShopCard
+                key={shops.id}
+                shops={shops}
+                {...this.props}
+            />
+        ))}
+        </>
+    )
+}
+}
+export default ShopDetail

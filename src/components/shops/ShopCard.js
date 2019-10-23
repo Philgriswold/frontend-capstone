@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { firstLetterCase } from '../../modules/helpers'
 import APIManager from '../../APIManager';
 
@@ -17,15 +17,12 @@ render() {
                 (this.props.shops.name)}</span></h3>
                 <h4> <span className="card-address">{
                 (this.props.shops.address)}</span></h4>
-                <button className="detail button">Details</button>
-                {/* <Link to={`/recipes/${this.props.region.id}`}><button
-                        className="ui icon button"
-                    ><i aria-hidden="true" className="explore icon"></i>
-                        Explore
-							</button></Link> */}
+                <div>
+                <Link to={`/shops/details`}><button className="detailsBtn">Details</button></Link>
+                </div>
              </div>
         </div>
-      )
+      ) 
 }
 
 }
