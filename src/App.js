@@ -31,7 +31,7 @@ setUser = (authObj) => {
 getUser(){if(this.isAuthenticated){this.setState({user: true})}} 
 
 clearUser = () => {
-  localStorage.clear()
+  sessionStorage.clear()
   this.setState({
     user: false
   });

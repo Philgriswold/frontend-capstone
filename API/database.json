@@ -81,9 +81,89 @@
       "email": "sam@sam.com",
       "password": "sam",
       "id": 14
+    },
+    {
+      "username": "",
+      "email": "jane@jane.com",
+      "password": "jane",
+      "id": 15
+    },
+    {
+      "email": "phil@phil.com",
+      "username": "phil",
+      "password": "phil",
+      "id": 16
     }
   ],
-  "Shops": [],
-  "Favorites": [],
-  "Reviews": []
+  "shops": [
+    {
+      "id": 1,
+      "name": "Ramen Ozakura Mukogaokayuen",
+      "address": "Japan, 〒214-0014 Kanagawa, Kawasaki, Tama Ward, Noborito, 2667-1 手塚北ビル １Ｆ"
+    },
+    {
+      "id": 2,
+      "name": "Mutsumiya Noborito shop",
+      "address": "Japan, 〒214-0014 Kanagawa, Kawasaki, Tama Ward, Noborito, 3404-1 HY店舗"
+    },
+    {
+      "id": 3,
+      "name": "Ramen Oyaji",
+      "address": "Japan, 〒194-0021 Tokyo, Machida, Nakamachi, 1 Chome−18−16 19-"
+    },
+    {
+      "id": 4,
+      "name": "Ramen Nagi Shimokitazawa",
+      "address": "2 Chome-12-7 Kitazawa, Setagaya City, Tokyo 155-0031, Japan"
+    },
+    {
+      "id": 5,
+      "name": "Ichiran",
+      "address": "Japan, 〒110-0005 Tokyo, Taito City, Ueno, 7 Chome−1−1 アトレ上野"
+    }
+  ],
+  "details": [
+    {
+      "id": 1,
+      "shopId": 1,
+      "style": "Miso",
+      "description": "great spot"
+    },
+    {
+      "id": 2,
+      "shopId": 2,
+      "style": "Tonkotsu",
+      "description": "so good"
+    },
+    {
+      "id": 3,
+      "shopId": 3,
+      "style": "Shio",
+      "description": "amazing"
+    },
+    {
+      "id": 4,
+      "shopId": 4,
+      "style": "Shoyu",
+      "description": "tasty"
+    },
+    {
+      "id": 5,
+      "shopId": 5,
+      "style": "Tan Tan Men",
+      "description": "delicious"
+    }
+  ],
+  "favorites": [],
+  "reviews": [
+    {
+      "userId": 16,
+      "locationId": 105,
+      "username": null,
+      "ratingTitle": "",
+      "review": "cvd",
+      "rating": 0,
+      "id": 1
+    }
+  ]
 }

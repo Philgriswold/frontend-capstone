@@ -12,14 +12,17 @@ export default {
     },
     get(resource, id) {
         return fetch(`${remoteURL}/${resource}/${id}`).then(newObj => newObj.json());
-  },
+    },
     searchUsername(email) {
         return fetch(`${remoteURL}/users?email=${email}`)
-       .then(e => e.json()
-    )
-  }
+            .then(e => e.json()
+            )
+    },
+    getShop() {
+        console.log("API.getShop")
+        return fetch(`${remoteURL}/shops`).then(response => response.json());
+    }
 }
-   
 
 
 
@@ -27,26 +30,3 @@ export default {
 
 
 
-// export default {
-
-//   getAll(resource) {
-//     return fetch(`${url}/${resource}`).then(newObj => newObj.json());
-//   },
-  
-//   delete(resource, id) {
-//     return fetch(`${url}/${resource}/${id}`, {
-//       method: "DELETE"
-//     }).then(newObj => newObj.json());
-//   },
-//   put(resource, editObj) {
-//     return fetch(`${url}/${resource}/${editObj.id}`, {
-//       method: "PUT",
-//       headers: {
-//         "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify(editObj)
-//     }).then(editObj => editObj.json());
-//   },
- 
- 
-// };
