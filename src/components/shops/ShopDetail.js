@@ -8,6 +8,8 @@ class ShopDetail extends Component {
         shop: {},
         name: "",
         address: "",
+        category: "",
+        description: "",
     }
 
 
@@ -17,6 +19,8 @@ componentDidMount(){
         this.setState({
             name: shop.name,
             address: shop.address,
+            category: shop.category,
+            description: shop.description,
         })
     })
 }
@@ -28,6 +32,7 @@ render(){
         {this.state.name}
         {this.state.address}
         {this.state.category}
+        {this.state.description}
         </>
     )
 }
