@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import ShopCard from './ShopCard'
 import APIManager from '../../APIManager'
+import ShopCard from './ShopCard'
+
 
 class ShopList extends Component {
     state = {
@@ -19,15 +20,16 @@ componentDidMount(){
 }
 
 render(){
+    console.log("ShopList: Render")
     return(
         <>
-        {this.state.shops.map(shops => (
+        {this.state.shops.map(shops => 
             <ShopCard
                 key={shops.id}
                 shops={shops}
                 {...this.props}
             />
-        ))}
+        )}
         </>
     )
 }

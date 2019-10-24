@@ -19,9 +19,9 @@ class ApplicationViews extends Component {
                <Route exact path="/shops" render={props => {
                return <ShopList setUser={this.props.setUser} {...props} {...this.props} />
               }} />
-                <Route path="/shops/ShopDetail" render={props => {
-               return <ShopDetail setUser={this.props.setUser} {...props} {...this.props} />
-              }} />
+              <Route path="/shops/:shopId(\d+)" render={(props) => {
+               return <ShopDetail shopId={parseInt(props.match.params.shopId)} {...this.props} {...props} />
+              }} />
             </>
   )
 }

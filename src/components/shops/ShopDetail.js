@@ -1,39 +1,36 @@
 import React, { Component } from 'react'
-import ShopCard from './ShopCard'
+import ShopDetailCard from './ShopDetailCard'
 import APIManager from '../../APIManager'
+import ShopCard from './ShopCard'
 
 class ShopDetail extends Component {
     state = {
-        shops: [],
-        address: [],
-        details: []
+        shop: {},
+        name: "",
+        address: "",
     }
 
+
 componentDidMount(){
-    APIManager.getShop()
-    .then((shops) => {
-        console.log("shops", shops)
+    APIManager.getShopById(this.props.match.params.shopId)
+    .then((shop) => {
         this.setState({
-            shops: shops,
-            address: address,
-            details: details
+            name: shop.name,
+            address: shop.address,
         })
     })
 }
 
 render(){
+    console.log("ShopDetail")
     return(
         <>
-        <h1>HELLO WORLD</h1>
-        {this.state.shops.map(shops => (
-            <ShopCard
-                key={shops.id}
-                shops={shops}
-                {...this.props}
-            />
-        ))}
+        {this.state.name}
+        {this.state.address}
+        {this.state.category}
         </>
     )
 }
 }
+
 export default ShopDetail

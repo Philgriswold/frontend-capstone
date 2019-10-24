@@ -99,60 +99,39 @@
     {
       "id": 1,
       "name": "Ramen Ozakura Mukogaokayuen",
-      "address": "Japan, 〒214-0014 Kanagawa, Kawasaki, Tama Ward, Noborito, 2667-1 手塚北ビル １Ｆ"
-    },
-    {
-      "id": 2,
-      "name": "Mutsumiya Noborito shop",
-      "address": "Japan, 〒214-0014 Kanagawa, Kawasaki, Tama Ward, Noborito, 3404-1 HY店舗"
-    },
-    {
-      "id": 3,
-      "name": "Ramen Oyaji",
-      "address": "Japan, 〒194-0021 Tokyo, Machida, Nakamachi, 1 Chome−18−16 19-"
-    },
-    {
-      "id": 4,
-      "name": "Ramen Nagi Shimokitazawa",
-      "address": "2 Chome-12-7 Kitazawa, Setagaya City, Tokyo 155-0031, Japan"
-    },
-    {
-      "id": 5,
-      "name": "Ichiran",
-      "address": "Japan, 〒110-0005 Tokyo, Taito City, Ueno, 7 Chome−1−1 アトレ上野"
-    }
-  ],
-  "details": [
-    {
-      "id": 1,
-      "shopId": 1,
-      "style": "Miso",
+      "address": "Japan, 〒214-0014 Kanagawa, Kawasaki, Tama Ward, Noborito, 2667-1 手塚北ビル １Ｆ",
+      "category": "Tonkotsu",
       "description": "great spot"
     },
     {
       "id": 2,
-      "shopId": 2,
-      "style": "Tonkotsu",
-      "description": "so good"
+      "name": "Ramen Gottsu",
+      "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
+      "category": "Tonkotsu & Gyokai Double Soup",
+      "description": "The house specialty is a velvety tonkotsu gyokai soup with the tiniest hint of sweetness. The chashu topping is sliced paper-thin and roasted in a way that calls to mind high-quality ham or bacon. Both the menma and soft-boiled egg are superb. Tiny slivers of yuzu peel top it off with some freshness."
     },
     {
       "id": 3,
-      "shopId": 3,
-      "style": "Shio",
-      "description": "amazing"
+      "name": "Chuka Soba Tomita Ramen",
+      "address": "Japan, 〒271-0092 Chiba, Matsudo, 1339 高橋ビル",
+      "category": "Tonkotsu Gyokai Tsukemen",
+      "description": "Thick, creamy, mind-blowing soup, laden with liquefied chunks of pork and fish matter that stick to the handmade dipping noodles marvelously. The noodles are thick, chewy and house-made. The chashu slabs are succulent and fatty."
+
     },
     {
       "id": 4,
-      "shopId": 4,
-      "style": "Shoyu",
-      "description": "tasty"
+      "name": "Konjiki Hototogisu",
+      "address": "Japan, 〒160-0022 Tokyo, Shinjuku City, Shinjuku, 2 Chome−4−1 第２２宮庭マンション 1F",
+      "category": "Shio & Shoyu w/ Hamaguri Clams",
+      "description": "The soup is a light, clear triple blend of Hamaguri clams, sea bream and dried gyokai (sea ingredients). On top of the bowls come extravagances like porcini mushroom duxelles sauce, golden inca berry sauce, white truffle oil and pancetta bacon bits. Noodles are homemade in the shop using six types of flour. "
     },
     {
       "id": 5,
-      "shopId": 5,
-      "style": "Tan Tan Men",
-      "description": "delicious"
-    }
+      "name": "Koukaibou Ramen",
+      "address": "2 Chome-13-10 Fukagawa, Koto City, Tokyo 135-0033, Japan",
+      "category": "Tonkotsu & Gyokai Double Soup",
+      "description": "The soup here is tonkotsu-gyokai fusion with niboshi. It's rich and smooth, but easy to drink – uncommonly light and balanced for this genre."
+     }
   ],
   "favorites": [],
   "reviews": [

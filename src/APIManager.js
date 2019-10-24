@@ -21,7 +21,11 @@ export default {
     getShop() {
         console.log("API.getShop")
         return fetch(`${remoteURL}/shops`).then(response => response.json());
+    },
+    getShopById(id) {
+        return fetch(`${remoteURL}/shops/${id}`).then(response => response.json());
     }
+
 }
 
 
