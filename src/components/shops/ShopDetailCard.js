@@ -29,15 +29,12 @@ class ShopDetailCard extends Component {
 render() {
     console.log("hey", this.props)
     return (
-        <div className="card">
+        <div className="detail-card">
             <div className="card-content">
-                <h1>hello im a card</h1>
-                <p>name: {this.props.shop.name}</p>
                 <h3> <span className="card-shopname">{this.props.shop.name}</span></h3>
                 <h4> <span className="card-address">{this.props.shop.address}</span></h4>
-                <div>
-                
-                </div>
+                <h4> <span className="card-category">{this.props.shop.category}</span></h4>
+                <h4> <span className="card-description">{this.props.shop.description}</span></h4>
              </div>
         </div>
       ) 
@@ -46,3 +43,15 @@ render() {
 }
 
 export default ShopDetailCard;
+
+{/* <div className="card">
+            <div className="card-content">
+                <h3> <span className="card-shopname">{
+                (this.props.shops.name)}</span></h3>
+                <h4> <span className="card-address">{
+                (this.props.shops.address)}</span></h4>
+                <div>
+                <Link to={`/shops/${this.props.shops.id}`}><button className="detailsBtn">Details</button></Link>
+                </div>
+             </div>
+        </div> */}
