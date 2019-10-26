@@ -2,20 +2,20 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 import ShopDetailCard from './ShopDetailCard'
 import APIManager from '../../APIManager'
-import ShopCard from './ShopCard'
+// import ShopDetailCard from './ShopDetailCard'
 
 class ShopDetail extends Component {
     state = {
         shop: {},
-        name: "",
-        address: "",
-        category: "",
-        description: "",
-        id: ""
+        // name: "",
+        // address: "",
+        // category: "",
+        // description: "",
+        // id: ""
     }
 handleFavorite = () => {
     let newFavorite = {
-        userId: parseInt(sessionStorage.getItem("credentials")),
+        userId: parseInt(sessionStorage.getItem("activeUser")),
         shopId: this.state.id
     }
     //post this object to the datbase
@@ -26,12 +26,14 @@ handleFavorite = () => {
 componentDidMount(){
     APIManager.getShopById(this.props.match.params.shopId)
     .then((shop) => {
+        console.log(shop)
         this.setState({
-            name: shop.name,
-            address: shop.address,
-            category: shop.category,
-            description: shop.description,
-            id: shop.id
+            shop: shop
+            // name: shop.name,
+            // address: shop.address,
+            // category: shop.category,
+            // description: shop.description,
+            // id: shop.id
         })
     })
 }
@@ -41,13 +43,7 @@ render(){
     return(
         <>
         <div className="card-detail">
-        {this.state.name}
-        {this.state.address}
-        {this.state.category}
-        {this.state.description}
-        <div>
-       <button type="button" onClick={this.handleFavorite}>Favorite</button>
-        </div>
+     <ShopDetailCard  shops={this.state.shop} />
         </div>
         </>
     )

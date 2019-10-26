@@ -18,7 +18,7 @@ class Register extends Component {
 
     handleRegister = (e) => {
         e.preventDefault()
-        let user = this.state.user;
+        let username = this.state.username;
         let email = this.state.email;
         let password = this.state.password;
         let confirmPassword = this.state.confirmpassword
@@ -26,19 +26,19 @@ class Register extends Component {
             alert("Passwords do not match")
         } else {
             let newUser = {
-                username:this.state.username,
-                email: this.state.email,
-                password: this.state.password,
+                username: username,
+                email: email,
+                password: password
             };
             console.log("hey", newUser)
 
         APIManager.addUser(newUser).then(result => {
+            console.log("result", result)
             this.setState({
                 userid: result.id
             })
-            this.props.setUser(result);
+            this.props.setUser(result.id);
             this.props.history.push(`/shops`);
-
         })
         }
 
@@ -49,6 +49,10 @@ class Register extends Component {
             <>
             <form className="register form" onSubmit={this.handleRegister}>
                 <h3>Register</h3>
+                <div className="field">
+                      <label htmlFor="userName">Username</label>
+                      <input placeholder="Username" onChange={this.handleFieldChange} required="" autoFocus="" id="username" />
+                </div>
                 <div className="register field">
                     <label htmlFor="email">Email Address</label>
                     <input placeholder="Email Address" onChange={this.handleFieldChange} required="" autoFocus="" id="email" />

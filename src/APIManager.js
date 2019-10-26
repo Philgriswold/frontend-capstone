@@ -13,8 +13,8 @@ export default {
     get(resource, id) {
         return fetch(`${remoteURL}/${resource}/${id}`).then(newObj => newObj.json());
     },
-    searchUsername(email) {
-        return fetch(`${remoteURL}/users?email=${email}`)
+    searchUsername(username) {
+        return fetch(`${remoteURL}/users?username=${username}`)
             .then(e => e.json()
             )
     },

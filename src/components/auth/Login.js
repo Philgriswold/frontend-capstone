@@ -4,10 +4,12 @@ import APIManager from '../../APIManager';
 import Register from './Register';
 // import ReactModalLogin from "react-modal-login";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { ifStatement } from '@babel/types';
  
 class Login extends Component {
     // Set initial state
     state = {
+      username: "",
       email: "",
       password: "",
       hideReg : true
@@ -30,28 +32,32 @@ class Login extends Component {
   
     handleLogin = (e) => {
       e.preventDefault()
-      /*
-          For now, just store the email and password that
-          the customer enters into local storage.
-      */
-      let credentials = { email: this.state.email, password: this.state.password }
-      APIManager.searchUsername(this.state.email)
-      .then(result => {
-        if (result.length > 0){
-          console.log(result)
-          //this returns an array - we only need object
-          this.props.setUser(result[0]);
-          this.props.history.push("/shops");
-        }else {
-          APIManager.addUser(credentials)
-          .then(result => {
-            //this returns an object
-            this.props.setUser(result);
-          })
-          this.props.history.push("/shops");
-        }
-      })
-    }
+      let username = this.state.username;
+      let email = this.state.email;
+      let password = this.state.password
+
+      APIManager.searchUsername(username)
+      .then(response => {
+        if (response.length === 0) {
+         alert('Please enter a username.');
+        } else if (response.length === 1 && response[0].password !== password) {
+         alert('Password is incorrect, please try again');
+        } else if (password === '') {
+            alert('Please enter a password');
+        } else if  (username === ''){
+            alert('Please enter a username');
+        } else if (response[0].password === password) {
+            this.setState({
+              userId: response[0].id
+            })
+            this.props.setUser(response[0].id)
+            this.props.history.push(`/shops`);
+          }
+          }
+          )
+      }
+
+        
   
     render() {
       return (
@@ -60,6 +66,10 @@ class Login extends Component {
         <form onSubmit={this.handleLogin}>
           <fieldset>
             <h3>Please sign in</h3>
+            <div className="field">
+                 <label htmlFor="username">Username</label>
+                 <input placeholder="Username" onChange={this.handleFieldChange} required="" autoFocus="" id="username" />
+            </div>
             <div className="formgrid">
               <input onChange={this.handleFieldChange} type="email"
                 id="email"
@@ -81,7 +91,7 @@ class Login extends Component {
         </form>
           )}
           {!this.state.hideReg && (
-      <Register setUser={this.props.setUser} hideReg={this.hideReg} />
+      <Register activeUser={this.props.activeUser} setUser={this.props.setUser}hideReg={this.hideReg} />
           )}
       </>
       )

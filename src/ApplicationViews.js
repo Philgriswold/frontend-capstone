@@ -12,19 +12,19 @@ class ApplicationViews extends Component {
         return (
             <>
               <Route path="/login" render={props => {
-               return <Login setUser={this.props.setUser} {...props} />
+               return <Login activeUser={this.props.activeUser} {...props} />
                 }} />
                <Route path="/register" render={props => {
-               return <Register setUser={this.props.setUser} {...props} />
+               return <Register activeUser={this.props.activeUser} {...props} />
               }} />
                <Route exact path="/shops" render={props => {
-               return <ShopList setUser={this.props.setUser} {...props} {...this.props} />
+               return <ShopList activeUser={this.props.activeUser} {...props} {...this.props} />
               }} />
-              <Route path="/shops/:shopId(\d+)" render={(props) => {
+              <Route exact path="/details/:shopId(\d+)" render={(props) => {
                return <ShopDetail shopId={parseInt(props.match.params.shopId)} {...this.props} {...props} />
               }} />
               <Route path="/favorites" render={(props) => {
-               return <ShopCard setUser={this.props.setUser} {...props} {...this.props} />
+               return <ShopCard activeUser={this.props.activeUser} {...props} {...this.props} />
               }} />
             </>
   )

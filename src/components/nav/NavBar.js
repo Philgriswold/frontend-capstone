@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Link, withRouter } from "react-router-dom"
+import { Nav } from "react-bootstrap"
+import './NavBar.css'
 
 class NavBar extends Component {
 
@@ -8,25 +10,24 @@ class NavBar extends Component {
         this.props.history.push('/login');
     }
 
-  render(){
+  render() {
     console.log("something", this.props)
     return (
-      <header>
-        <h1 className="site-title">Ramen Site</h1>
-        <nav>
-          <ul className="container">
-             <>
-                <li><Link className="nav-link" to="/shops">Shops</Link></li>
-                <li><Link className="nav-link" to="/favorites">Favorites</Link></li>
-                {/* <li><button className="nav-link" onClick={this.handleLogout}>Logout</button></li> */}
-                {/* <li><button size='small' onClick={this.handleLogout}>Logout</button></li> */}
-                <li><Link className="nav-link" onClick={this.handleLogout}>Logout</Link></li>
-            </>
-          </ul>
-        </nav>
-      </header>
+       
+       <Nav justify variant="tabs" defaultActiveKey="/shops">
+           <Nav.Item>
+                <Nav.Link href="/shops">Shops</Nav.Link>
+           </Nav.Item>
+           <Nav.Item>
+                 <Nav.Link href="/favorites">Favorites</Nav.Link>
+           </Nav.Item>
+            <Nav.Item>
+                <Nav.Link onClick={this.handleLogout}>Logout</Nav.Link>
+            </Nav.Item>
+        </Nav>
     )
-  }
+   }
+
 }
 
-export default NavBar;
+export default withRouter(NavBar);

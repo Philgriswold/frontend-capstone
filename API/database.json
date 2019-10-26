@@ -1,98 +1,22 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "phil",
-      "email": "phil@phil.com",
-      "password": "123"
-    },
-    {
-      "id": 2,
-      "username": "bill",
-      "email": "bill@bill.com",
-      "password": "456"
-    },
-    {
-      "user": "",
-      "email": "phil@phil.com",
-      "password": "ab",
-      "id": 3
-    },
-    {
-      "username": "",
-      "email": "phil@phil.com",
-      "password": "ab",
-      "id": 4
-    },
-    {
-      "username": "",
-      "email": "phil@phil.com",
-      "password": "ab",
-      "id": 5
-    },
-    {
-      "username": "",
-      "email": "jill@jill.com",
-      "password": "hey",
-      "id": 6
-    },
-    {
-      "email": "jane@jane.com",
-      "password": "jane",
-      "id": 7
-    },
-    {
-      "username": "",
-      "email": "ted@ted.com",
-      "password": "ted",
-      "id": 8
-    },
-    {
-      "username": "",
-      "email": "tammy@tammy.com",
-      "password": "tammy",
-      "id": 9
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": 10
-    },
-    {
-      "username": "",
-      "email": "nate@nate.com",
-      "password": "nate",
-      "id": 11
-    },
-    {
-      "username": "",
+      "username": "y",
       "email": "fred@fred.com",
-      "password": "fred",
-      "id": 12
+      "password": "y",
+      "id": 1
     },
     {
-      "username": "",
-      "email": "hey@hey.com",
-      "password": "hey",
-      "id": 13
-    },
-    {
-      "username": "",
-      "email": "sam@sam.com",
-      "password": "sam",
-      "id": 14
-    },
-    {
-      "username": "",
+      "username": "fortu",
       "email": "jane@jane.com",
-      "password": "jane",
-      "id": 15
+      "password": "hello",
+      "id": 2
     },
     {
-      "email": "phil@phil.com",
-      "username": "phil",
-      "password": "phil",
-      "id": 16
+      "username": "p",
+      "email": "jill@jill.com",
+      "password": "l",
+      "id": 3
     }
   ],
   "shops": [
@@ -116,7 +40,6 @@
       "address": "Japan, 〒271-0092 Chiba, Matsudo, 1339 高橋ビル",
       "category": "Tonkotsu Gyokai Tsukemen",
       "description": "Thick, creamy, mind-blowing soup, laden with liquefied chunks of pork and fish matter that stick to the handmade dipping noodles marvelously. The noodles are thick, chewy and house-made. The chashu slabs are succulent and fatty."
-
     },
     {
       "id": 4,
@@ -131,7 +54,7 @@
       "address": "2 Chome-13-10 Fukagawa, Koto City, Tokyo 135-0033, Japan",
       "category": "Tonkotsu & Gyokai Double Soup",
       "description": "The soup here is tonkotsu-gyokai fusion with niboshi. It's rich and smooth, but easy to drink – uncommonly light and balanced for this genre."
-     }
+    }
   ],
   "favorites": [],
   "reviews": [
