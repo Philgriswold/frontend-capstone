@@ -56,7 +56,57 @@
       "description": "The soup here is tonkotsu-gyokai fusion with niboshi. It's rich and smooth, but easy to drink – uncommonly light and balanced for this genre."
     }
   ],
-  "favorites": [],
+  "favorites": [
+    {
+      "userId": 1,
+      "shopId": 2,
+      "name": "Ramen Gottsu",
+      "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "shopId": 1,
+      "name": "Ramen Ozakura Mukogaokayuen",
+      "address": "Japan, 〒214-0014 Kanagawa, Kawasaki, Tama Ward, Noborito, 2667-1 手塚北ビル １Ｆ",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "shopId": 1,
+      "name": "Ramen Ozakura Mukogaokayuen",
+      "address": "Japan, 〒214-0014 Kanagawa, Kawasaki, Tama Ward, Noborito, 2667-1 手塚北ビル １Ｆ",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "shopId": 2,
+      "name": "Ramen Gottsu",
+      "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "shopId": 3,
+      "name": "Chuka Soba Tomita Ramen",
+      "address": "Japan, 〒271-0092 Chiba, Matsudo, 1339 高橋ビル",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "shopId": 2,
+      "name": "Ramen Gottsu",
+      "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "shopId": 3,
+      "name": "Chuka Soba Tomita Ramen",
+      "address": "Japan, 〒271-0092 Chiba, Matsudo, 1339 高橋ビル",
+      "id": 7
+    }
+  ],
   "reviews": [
     {
       "userId": 16,

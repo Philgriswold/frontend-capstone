@@ -34,7 +34,7 @@ class Login extends Component {
       e.preventDefault()
       let username = this.state.username;
       let email = this.state.email;
-      let password = this.state.password
+      let password = this.state.password;
 
       APIManager.searchUsername(username)
       .then(response => {

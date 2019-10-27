@@ -24,6 +24,29 @@ export default {
     },
     getShopById(id) {
         return fetch(`${remoteURL}/shops/${id}`).then(response => response.json());
+    },
+    getFavoriteLocations()  {
+        return fetch(`${remoteURL}/favorites`)
+        .then(result => result.json())
+        .then(response => {
+            return response
+        })   
+    },
+    saveFavorite(favorite) {
+        return fetch(`${remoteURL}/favorites`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(favorite)
+        })
+        .then(data => data.json())
+    },
+    deleteFavoriteLocation(id) {
+        return fetch(`${remoteURL}/favorites/${id}`,
+            {
+                method: "DELETE"
+            }).then(response => response.json());
     }
 
 }

@@ -9,6 +9,21 @@ class ShopCard extends Component {
         APIManager.delete(id)
         .then(() => this.props.getData());
     }
+
+    handleFavorite = () => {
+        console.log("handle")
+        let newFavorite = {
+            userId: parseInt(sessionStorage.getItem("activeUser")),
+            shopId: this.props.shops.id,
+            name: this.props.shops.name,
+            address: this.props.shops.address
+        }
+    APIManager.saveFavorite(newFavorite)
+        //post this object to the datbase
+        //send the user to the favorites page
+    
+    }
+
 render() {
     console.log("here at card",this.props.shops)
     return (
@@ -24,7 +39,7 @@ render() {
                 (this.props.shops.description)}</span></h4>
                 <div>
                 {/* <Link to={`/shops/${this.props.name.id}`}><button className="detailsBtn">Details</button></Link> */}
-                <button type="button" onClick={() => {this.props.history.push(`/details/${this.props.shops.id}`)}}>Details</button>
+                <button type="button" onClick={() => this.handleFavorite()}>Favorite</button>
                 </div>
              </div>
         </div>

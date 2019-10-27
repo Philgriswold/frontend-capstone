@@ -5,6 +5,7 @@ import Register from '../src/components/auth/Register';
 import ShopList from './components/shops/ShopList'
 import ShopDetail from './components/shops/ShopDetail';
 import ShopCard from './components/shops/ShopCard';
+import FavoriteLocationList from './components/favorites/FavoriteLocationList'
 
 class ApplicationViews extends Component {
 
@@ -24,7 +25,7 @@ class ApplicationViews extends Component {
                return <ShopDetail shopId={parseInt(props.match.params.shopId)} {...this.props} {...props} />
               }} />
               <Route path="/favorites" render={(props) => {
-               return <ShopCard activeUser={this.props.activeUser} {...props} {...this.props} />
+               return <FavoriteLocationList activeUser={this.props.activeUser} {...props} {...this.props} />
               }} />
             </>
   )

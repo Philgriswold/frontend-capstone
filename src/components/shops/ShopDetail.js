@@ -13,15 +13,7 @@ class ShopDetail extends Component {
         // description: "",
         // id: ""
     }
-handleFavorite = () => {
-    let newFavorite = {
-        userId: parseInt(sessionStorage.getItem("activeUser")),
-        shopId: this.state.id
-    }
-    //post this object to the datbase
-    //send the user to the favorites page
 
-}
 
 componentDidMount(){
     APIManager.getShopById(this.props.match.params.shopId)
