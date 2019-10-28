@@ -21,13 +21,12 @@ class FavoriteLocationCard extends Component {
 
         <div className="favoriteShopCard">
         <div className="favoriteLocationCardContent">
-        <div className="deleteBtnParent">
-        <button className="deleteBtn" onClick={() => 
+        <div className="deleteButtonParent">
+        <button className="deleteButton" onClick={() => 
           APIManager.deleteFavoriteLocation(this.props.favoriteLocation.id)
           .then(() => {this.props.getFavoriteLocations()})}> 
           </button>
           </div>
-            {/* <img src={require('../icons/castle.svg')} alt="Spooky Location" className="spookyLocationIcon"/> */}
           <div className="shopCardText">
           <h4>{this.props.favoriteLocations.name}</h4>
           <p>{this.props.favoriteLocations.address}</p>

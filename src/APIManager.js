@@ -25,35 +25,65 @@ export default {
     getShopById(id) {
         return fetch(`${remoteURL}/shops/${id}`).then(response => response.json());
     },
-    getFavoriteLocations()  {
+    getFavoriteLocations() {
         return fetch(`${remoteURL}/favorites`)
-        .then(result => result.json())
-        .then(response => {
-            return response
-        })   
+            .then(result => result.json())
+            .then(response => {
+                return response
+            })
     },
     saveFavorite(favorite) {
-        return fetch(`${remoteURL}/favorites`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(favorite)
-        })
-        .then(data => data.json())
+        return fetch(`${remoteURL}/favorites/`,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(favorite)
+            })
+            .then(data => data.json())
     },
     deleteFavoriteLocation(id) {
         return fetch(`${remoteURL}/favorites/${id}`,
             {
                 method: "DELETE"
             }).then(response => response.json());
-    }
+    },
 
+    getAllReviews() {
+    return fetch(`${remoteURL}/reviews?_sort=rating&_order=desc`)
+        .then(result => result.json())
+    },
+    getReview(id) {
+    return fetch(`${remoteURL}/reviews/${id}`)
+        .then(response => response.json());
+    },
+    postReview(newReview) {
+    return fetch(`${remoteURL}/reviews`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newReview)
+    })
+        .then(data => data.json())
+    },
+    deleteReview(id) {
+    return fetch(`${remoteURL}/reviews/${id}`,
+        {
+            method: "DELETE"
+        })
+        .then(response => response.json())
+    },
+    editReview(editedReview) {
+    return fetch(`${remoteURL}/reviews/${editedReview.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(editedReview)
+    })
+        .then(response => response.json());
 }
 
-
-
-
-
-
-
+}
