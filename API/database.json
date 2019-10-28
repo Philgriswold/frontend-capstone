@@ -59,16 +59,137 @@
       "url": "./images/Koukaibou.jpeg",
       "category": "Tonkotsu & Gyokai Double Soup",
       "description": "The soup here is tonkotsu-gyokai fusion with niboshi. It's rich and smooth, but easy to drink – uncommonly light and balanced for this genre."
-    }
-  ],
-  "favorites": [
+    },
     {
-      "userId": 1,
-      "shopId": 3,
-      "name": "Chuka Soba Tomita Ramen",
-      "address": "Japan, 〒271-0092 Chiba, Matsudo, 1339 高橋ビル",
-      "id": 1
-    }
-  ],
-  "reviews": []
+      "id": 6,
+      "name": "Menya Kissou",
+      "address": "1 Chome-11-3 Toyo, Koto City, Tokyo 135-0016, Japan",
+      "url": "./images/Kissou.jpeg",
+      "category": "Tonkotsu & Gyokai Double Soup",
+      "description": "Kissou serves a double soup of tonkotsu and gyokai — velvety and umami-rich. The noodles are house-made, and the egg topping is elite level. Both the tsukemen and ramen are worth trying."
+    },
+    {
+      "id": 7,
+      "name": "Menya Mizukaze",
+      "address": "3 Chome-11-13 Tanashicho, Nishitokyo, Tokyo 188-0011, Japan",
+      "url": "./images/Mizukaze.jpeg",
+      "category": "Tori Paitan",
+      "description": "The main draw is the tori paitan ramen, with a soup made from pork, chicken meat, chicken feet, chicken skin and pork feet.  The complex soup simmers for nine hours before it's ready to be served. Also on the menu is a niboshi ramen, made from two different types of niboshi and saba."
+    },
+    {
+      "id": 8,
+      "name": "Menya Sakurai",
+      "address": " 2 Chome-15-27 Nishikubo, Musashino, Tokyo 180-0013, Japan",
+      "url": "./images/Sakurai.jpeg",
+      "category": "Shoyu, Shio & Niboshi",
+      "description": "The soup is composed of two varieties of chickens from Hakata and Oyama, mixed with pork bones, shiitake mushrooms, Nagasaki dried sardines, Hokkaido kombu and several kinds of katsuo. The shoyu tare contains six different soy sauces sourced from around Japan."
+    },
+    {
+      "id": 9,
+      "name": "Sansanto",
+      "address": "Address: 3 Chome-16-15 Nakajujo, Kita City, Tokyo 114-0032, Japan",
+      "url": "./images/Sansanto.jpeg",
+      "category": "Tonkotsu & Gyokai Double Soup",
+      "description": " Gotou-san's soup is a classic tonkotsu-gyokai double soup. It's light and salty but the gyokai is masterfully integrated, giving the soup a hint of sweetness. The shop has a nostalgic atmosphere of old Japan."
+    },
+    {
+      "id": 10,
+      "name": "Shibata",
+      "address": "2 Chome-25-20 Wakabacho, Chofu, Tokyo 182-0003, Japan",
+      "url": "./images/Shibata.jpeg",
+      "category": "Shoyu w/ Chicken & Niboshi",
+      "description": " Chukka soba is traditionally a cheap, everyday variety of ramen, but Shibata's rendition is prepared with gourmet subtlety using premium ingredients, such as duck and hamaguri clam-based shoyu soup. "
+},
+{
+      "id": 11,
+      "name": "Takano",
+      "address": "2 Chome-15-10 Nakanobu, Shinagawa City, Tokyo 142-0053, Japan",
+      "url": "./images/Takano.jpeg",
+      "category": "Shoyu w/ Chicken & Niboshi",
+      "description": "The noodles are handmade from whole wheat. The specialty is a delicate niboshi shoyu ramen. For each order served, the master pours the soup through a strainer full of dried niboshi directly into the bowl, further infusing the broth with the natural essence and umami of the fish."
+},
+{
+      "id": 12,
+      "name": "Tsukemen Michi",
+      "address": "5-28-17 Kameari, 葛飾区 Katsushika City, Tokyo 125-0061, Japan",
+      "url": "./images/Michi.jpg",
+      "category": "Tonkotsu & Gyokai Tsukemen",
+      "description": "With one of the finest bowls of tsukemen in all of the land, Michi is an esteemed stop on the Tokyo scene. The double soup is made with chicken, tonkotsu and gyokai, and it's surprisingly silkier and smoother than many of the other top-level shops of the same genre."
+},
+{
+       "id": 13,
+       "name": "Uchoku",
+       "address": "Japan, 〒167-0032 Tokyo, Suginami City, Amanuma, 3 Chome−10−16-102 迂直",
+       "url": "./images/Uchoku.jpeg",
+       "category": "Shoyu Tsukemen",
+       "description": "With one of the finest bowls of tsukemen in all of the land, Michi is an esteemed stop on the Tokyo scene. The double soup is made with chicken, tonkotsu and gyokai, and it's surprisingly silkier and smoother than many of the other top-level shops of the same genre."
+},
+{
+      "id": 14,
+      "name": "Benten",
+      "address": "3 Chome-25 Asahicho, 練馬区 Nerima City, Tokyo 179-0071, Japan",
+       "url": "./images/Benten.jpeg",
+      "category": "Shoyu w/ Tonkotsu & Gyokai",
+      "description": "This shop still boasts one of the most brutal lines in Tokyo — a 1-2 hour wait at the door pretty much every day. Nevertheless, this is a must-eat bowl for all serious ramen fans — a cult tsukemen that has influenced the scene for over two decades. Only open for lunch"
+},
+{
+      "id": 15,
+      "name": "Ittou",
+      "address": "1 Chome-4-17 Higashishinkoiwa, Katsushika City, Tokyo 124-0023, Japan",
+       "url": "./images/Ittou.jpeg",
+      "category": "Tori-Paitan w/ Gyokai",
+      "description": "the soup is rich, savory, and unforgettable. Along with some tender, slow-cooked buta and tori chashu, the bowls also come with ground chicken balls containing crunchy bits of cartilage and some interesting spices. The noodles are house made from six varieties of flour. "
+},
+{
+      "id": 16,
+      "name": "Benten",
+      "address": "3 Chome-25 Asahicho, 練馬区 Nerima City, Tokyo 179-0071, Japan",
+       "url": "./images/Benten.jpeg",
+      "category": "Shoyu w/ Tonkotsu & Gyokai",
+      "description": "This shop still boasts one of the most brutal lines in Tokyo — a 1-2 hour wait at the door pretty much every day. Nevertheless, this is a must-eat bowl for all serious ramen fans — a cult tsukemen that has influenced the scene for over two decades. Only open for lunch"
+},
+{
+      "id": 17,
+      "name": "Kinari",
+      "address": "1 Chome-51-4 Higashinakano, Nakano City, Tokyo 164-0003, Japan",
+      "url": "./images/Kinari.jpg",
+      "category": "Shio & Shoyu w/ Chicken & Niboshi",
+      "description": "What you have here is absolute top-class shio and shoyu ramen. Niboshi-rich soup, premium toppings (including lights-out 'teion chori' pork shoulder), and a grade A+++ egg. "
+},
+{
+      "id": 18,
+      "name": "Kujira Shokudo",
+      "address": "5 Chome-1-1 1102 Kajinocho, Koganei, Tokyo 184-0002, Japan",
+      "url": "./images/Kujira.jpeg",
+      "category": "Shio & Shoyu w/ Handmade Noodles",
+      "description": "Shimomura-san's specialty is a Kitakata-style shoyu ramen, with fabulous house-made temomi noodles. Like Shichisai, the chashu here is also top level – thick, succulent and tender."
+},
+{
+      "id": 19,
+      "name": "Kuroki",
+      "address": "2-15 Kanda Izumicho, Chiyoda City, Tokyo 101-0024, Japan",
+      "url": "./images/Kuroki.jpeg",
+      "category": "Shio w/ Chicken or Shoyu w/ Duck",
+      "description": "The master, Kuroki-san, is best known for his shio, which is delicate and made with chicken. He also serves a popular miso and two varieties of fresh house-made noodles for any order."
+},
+{
+      "id": 20,
+      "name": "Matador",
+      "address": "Japan, 〒120-0025 Tokyo, Adachi City, Senjuazuma, 2 Chome−4−17 中村ビル",
+      "url": "./images/Matador.jpeg",
+      "category": "Beef Ramen",
+      "description": "Gyukotsu ramen is notoriously difficult to pull off, as beef-based soup easily becomes overpowering or takes on an icky sweetness. Getting the balance right in the bowl is said to be very tricky. Matador is lights-out. Every detail in the bowl is on-point — drinkable soup, excellent noodles and a flawless egg."
+}
+
+],
+"favorites": [
+  {
+    "userId": 1,
+    "shopId": 3,
+    "name": "Chuka Soba Tomita Ramen",
+    "address": "Japan, 〒271-0092 Chiba, Matsudo, 1339 高橋ビル",
+    "id": 1
+  }
+],
+"reviews": []
 }
