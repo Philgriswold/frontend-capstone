@@ -5,26 +5,31 @@ import APIManager from '../../APIManager'
 
 
 class FavoriteLocationList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            favoriteLocations: [],
-        };
-        // this.getfavoriteLocations = this.getfavoriteLocations.bind(this);
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         favoriteLocations: [],
+    //     };
+    //     // this.getfavoriteLocations = this.getfavoriteLocations.bind(this);
+    // }
+    state = {
+        favoriteLocations: []
     }
 
+
 componentDidMount(){
-    APIManager.getFavoriteLocations()
-    .then((favoriteLocations) => {
-        this.setState({
-            favoriteLocations: favoriteLocations
-        })
-        console.log("fav", favoriteLocations)
-    })   
+    this.getFavoriteLocationsData()
+    // APIManager.getFavoriteLocations()
+    // .then((favoriteLocations) => {
+    //     this.setState({
+    //         favoriteLocations: favoriteLocations
+    //     })
+    //     console.log("fav", favoriteLocations)
+    // })   
 }
 
-getFavoriteLocations(){
-    APIManager.getAllFavoriteLocations()
+getFavoriteLocationsData = () => {
+    APIManager.getFavoriteLocations()
     .then((favoriteLocations) => {
         this.setState({
             favoriteLocations: favoriteLocations
@@ -40,7 +45,7 @@ render(){
             {this.state.favoriteLocations.map((favoriteLocations, i) => <FavoriteLocationCard 
             key={i}
             favoriteLocations={favoriteLocations}
-            getFavoriteLocations={this.getFavoriteLocations}
+            getFavoriteLocationsData={this.getFavoriteLocationsData}
             {...this.props}
             />)}
         </div> 

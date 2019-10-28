@@ -39,14 +39,21 @@
   box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
 }
 
-.card-picture {
+/* .card-picture {
   position: relative;
     float: left;
     width:  50px;
     height: 50px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
+    background-position: 50% 50%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.cardpicture-container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 .favoriteShopCard {
@@ -58,3 +65,9 @@
   flex: 0 1 24%;
   width: 40%;
 }
+/* 
+.card-content {
+  display: flex;
+  justify-content: row;
+  align-items: column;
+} */

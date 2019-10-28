@@ -4,8 +4,8 @@ import APIManager from '../../APIManager'
 class FavoriteLocation extends Component {
 
     componentDidMount() {
-        DataManager.getAllFavoriteLocations()
-            .then(saved => {
+        APIManager.getAllFavoriteLocations()
+            .then(favorited => {
                 this.setState({
                     favorited: favorited
                 })
@@ -14,7 +14,7 @@ class FavoriteLocation extends Component {
 
 
     handleFavorite = event => {
-        console.log(this.props)
+        console.log(this.props) 
         event.preventDefault();
         this.setState({ loadingStatus: true });
         const favorited = {

@@ -5,34 +5,36 @@ import APIManager from "../../APIManager"
 class FavoriteLocationCard extends Component {
     state = {
         location: {},
+        url: {},
     }
    
     handleDelete = (id) => {
-        APIManager.deleteFavoriteLocation(id)
-        .then(() => this.props.getData());
+        APIManager.deleteFavoriteLocation(this.props.favoriteLocations.id)
+        .then(() => this.props.getFavoriteLocationsData());
     }
 
   render() {
     const activeUser = parseInt(sessionStorage.getItem("credentials"))
     const checkUser = this.props.favoriteLocations.userId === activeUser
-    console.log("CHECK DATA", this.props.favoriteLocations);
+    console.log("herro", this.props.favoriteLocations);
     return (
       <div>
 
         <div className="favoriteShopCard">
         <div className="favoriteLocationCardContent">
         <div className="deleteButtonParent">
-        <button className="deleteButton" onClick={() => 
-          APIManager.deleteFavoriteLocation(this.props.favoriteLocation.id)
-          .then(() => {this.props.getFavoriteLocations()})}> 
-          </button>
+        <button className="deleteButton" onClick={this.handleDelete} >Delete</button>
           </div>
           <div className="shopCardText">
           <h4>{this.props.favoriteLocations.name}</h4>
           <p>{this.props.favoriteLocations.address}</p>
           </div>
+          {/* <div className="card-picture">
+                <img  src={require(`${this.state.shops.url}`)} alt="Ramen Shop" />
+                </div> */}
           <div>
-          <Link to={`/shops/${this.props.favoriteLocations.shopId}`}><button className="savedDetailsBtn">Delete</button></Link>
+          {/* <button type="button" onClick={() => this.handleFavorite()}>Favorite</button> */}
+          {/* <Link to={`/shops/${this.props.favoriteLocations.shopId}`}><button className="favDeleteButton">Delete</button></Link> */}
           </div>
       </div>
       </div></div>

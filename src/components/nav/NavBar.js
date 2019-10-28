@@ -14,15 +14,16 @@ class NavBar extends Component {
     render(){
         return (
           <header>
-            <h1 className="site-title">Ramen Site</h1>
+            <h1 className="site-title">The Ramenator</h1>
+            <h2 className="site-jptitle"><strong>ザー・ラーメンアートー</strong></h2>
             <nav>
               <ul className="container">
                  <>
-                    <li><Link className="nav-link" to="/shops">Shops</Link></li>
-                    <li><Link className="nav-link" to="/favorites">Favorites</Link></li>
-                    <li><span className="nav-link" onClick={this.handleLogout}>Logout</span></li>
+                    <li><Link className="nav-link" to="/shops"><strong>ショプス</strong></Link></li>
+                    <li><Link className="nav-link" to="/favorites"><strong>フェーボリッツ</strong></Link></li>
+                    <li><span className="nav-link" onClick={this.handleLogout}><strong>ロガウト</strong></span></li>
                 </>
-                }
+                
               </ul>
             </nav>
           </header>

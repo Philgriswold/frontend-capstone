@@ -7,22 +7,38 @@ import Rating from 'react-rating'
 import { Form, TextArea } from 'semantic-ui-react'
 
 class ShopCard extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { value: ''
+        state = {
+             value: "",
+             userId: "",
+             shopId: "",
+            //  review: "",
     };
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    handleChange(event) {
+    handleChange = (event) => {
         this.setState({ value: event.target.value });
     }
 
-    handleSubmit(event) {
+    handleSubmitReview = () => {
+        let newReview = {
+            userId: parseInt(sessionStorage.getItem("activeUser")),
+            shopId: this.props.shops.id,
+            value: this.state.value
+            // review: review
+        }
+        APIManager.postReview(newReview)
+        .then((newReview) => {
+            this.setState({
+                newReview: newReview
+    }
+            )}
+            )}
+
+    handleSubmit = (event) => {
         alert('' + this.state.value);
         event.preventDefault()
     }
+    //have the handle submit post stuff to database and have .then that then sets the state
+    //and then calls the new card
         
        
     handleDelete = (id) => {
@@ -41,8 +57,17 @@ class ShopCard extends Component {
         APIManager.saveFavorite(newFavorite)
 
     }
-
-    render() {
+    // componentDidMount(){
+    //     APIManager.getShop()
+    //     .then((shops) => {
+    //         this.setState({
+    //             shops: shops
+    //         })
+    //     })
+    // }
+//component did mount get get all reviews based on shopId
+//import reviewCard here make a card for each...
+    render()  {
         console.log("here at card", this.props.shops)
         return (
             <div className="card">
@@ -53,6 +78,9 @@ class ShopCard extends Component {
                         (this.props.shops.address)}</span></h4>
                     <h4> <span className="card-category">{
                         (this.props.shops.category)}</span></h4>
+                    {/* <div className="card-picture">
+                    <img  src={require(`${this.props.shops.url}`)} alt="Ramen Shop" />
+                    </div> */}
                     <h4> <span className="card-description">{
                         (this.props.shops.description)}</span></h4>
                     <div>
@@ -62,7 +90,7 @@ class ShopCard extends Component {
                     <br></br>
                     <Rating />
                     <br></br>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmitReview}>
                     <form>
                         Review
           <input type="text" value={this.state.value} onChange={this.handleChange} />
@@ -74,6 +102,5 @@ class ShopCard extends Component {
         )
     }
 }
-
 
 export default ShopCard;

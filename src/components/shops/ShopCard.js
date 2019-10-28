@@ -18,9 +18,9 @@ render() {
                 (this.props.shops.name)}</span></h3>
                 <h4> <span className="card-address">{
                 (this.props.shops.address)}</span></h4>
-                <picture>
+                <div className="card-picture">
                 <img  src={require(`${this.props.shops.url}`)} alt="Ramen Shop" />
-               </picture>
+                </div>
                 <div>
                 {/* <Link to={`/shops/${this.props.name.id}`}><button className="detailsBtn">Details</button></Link> */}
                 <button type="button" onClick={() => {this.props.history.push(`/details/${this.props.shops.id}`)}}>Details</button>
