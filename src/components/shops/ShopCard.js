@@ -16,7 +16,7 @@ render() {
             <div className="card-content">
                 <h3> <span className="card-shopname">{
                 (this.props.shops.name)}</span></h3>
-                <h4> <span className="card-address">{
+                <h4><span className="card-address">{
                 (this.props.shops.address)}</span></h4>
                 <div className="card-picture">
                 <img  src={require(`${this.props.shops.url}`)} alt="Ramen Shop" />

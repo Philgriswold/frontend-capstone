@@ -8,6 +8,8 @@
 // class ShopReviewCard extends Components {
 //     state = {
 //         value: [],
+//         userId: userId,
+//         shopId: shopId,
 //     }
 
 //     handleFieldChange = evt => {
@@ -16,12 +18,12 @@
 //         this.setState(stateToChange);
 //     };
 
-//     // handleGetReview = () => {
-//     //     let newReview = {
-//     //         userId: parseInt(sessionStorage.getItem("activeUser")),
-//     //         shopId: this.props.shops.id,
-//     //         value: this.state.value
-//     //     }
+//     handleGetReview = () => {
+//         let newReview = {
+//             userId: parseInt(sessionStorage.getItem("activeUser")),
+//             shopId: this.props.shops.id,
+//             value: this.state.value
+//         }
 
 //     componentDidMount() {
 //         APIManager.getReview(value)

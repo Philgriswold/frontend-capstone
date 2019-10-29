@@ -22,15 +22,18 @@ componentDidMount(){
 render(){
     console.log("ShopList: Render")
     return(
+        <div className="card-container">
         <>
         {this.state.shops.map(shops => 
             <ShopCard
                 key={shops.id}
                 shops={shops}
                 {...this.props}
+
             />
         )}
         </>
+        </div>
     )
 }
 }
