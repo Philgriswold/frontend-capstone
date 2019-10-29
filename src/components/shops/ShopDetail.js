@@ -15,31 +15,32 @@ class ShopDetail extends Component {
     }
 
 
-componentDidMount(){
-    APIManager.getShopById(this.props.match.params.shopId)
-    .then((shop) => {
-        console.log(shop)
-        this.setState({
-            shop: shop
-            // name: shop.name,
-            // address: shop.address,
-            // category: shop.category,
-            // description: shop.description,
-            // id: shop.id
-        })
-    })
-}
+    componentDidMount() {
+        APIManager.getShopById(this.props.match.params.shopId)
+            .then((shop) => {
+                console.log(shop)
+                this.setState({
+                    shop: shop
+                    // name: shop.name,
+                    // address: shop.address,
+                    // category: shop.category,
+                    // description: shop.description,
+                    // id: shop.id
+                })
+            })
+    }
 
-render(){
-    console.log("ShopDetail")
-    return(
-        <>
-        <div className="card-detail">
-     <ShopDetailCard  shops={this.state.shop} />
-        </div>
-        </>
-    )
-}
+    render() {
+        console.log("ShopDetail")
+        return (
+            <>
+                <div className="card-detail">
+                    <ShopDetailCard shops={this.state.shop}
+                        shopId={this.props.shopId} />
+                </div>
+            </>
+        )
+    }
 }
 
 

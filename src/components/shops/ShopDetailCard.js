@@ -7,11 +7,12 @@ import Rating from 'react-rating'
 import { Form, TextArea } from 'semantic-ui-react'
 
 class ShopCard extends Component {
-        state = {
-             value: "",
-             userId: "",
-             shopId: "",
-            //  review: "",
+    state = {
+        value: "",
+        userId: "",
+        shopId: "",
+        reviews: [],
+        //  review: "",
     };
 
     handleChange = (event) => {
@@ -26,12 +27,14 @@ class ShopCard extends Component {
             // review: review
         }
         APIManager.postReview(newReview)
-        .then((newReview) => {
-            this.setState({
-                newReview: newReview
+            .then((newReview) => {
+                this.setState({
+                    newReview: newReview
+                }
+                )
+            }
+            )
     }
-            )}
-            )}
 
     handleSubmit = (event) => {
         alert('' + this.state.value);
@@ -39,8 +42,8 @@ class ShopCard extends Component {
     }
     //have the handle submit post stuff to database and have .then that then sets the state
     //and then calls the new card
-        
-       
+
+
     handleDelete = (id) => {
         APIManager.delete(id)
             .then(() => this.props.getData());
@@ -57,17 +60,24 @@ class ShopCard extends Component {
         APIManager.saveFavorite(newFavorite)
 
     }
-    // componentDidMount(){
-    //     APIManager.getShop()
-    //     .then((shops) => {
-    //         this.setState({
-    //             shops: shops
-    //         })
-    //     })
-    // }
-//component did mount get get all reviews based on shopId
-//import reviewCard here make a card for each...
-    render()  {
+    componentDidMount() {
+        console.log("shopId", this.props.shopId)
+        APIManager.getReview(this.props.shopId)
+            .then((value) => {
+                console.log("value", value)
+                this.setState({
+                    reviews: value
+                    // name: shop.name,
+                    // address: shop.address,
+                    // category: shop.category,
+                    // description: shop.description,
+                    // id: shop.id
+                })
+            })
+    }
+    //component did mount get get all reviews based on shopId
+    //import reviewCard here make a card for each...
+    render() {
         console.log("here at card", this.props.shops)
         return (
             <div className="card">
@@ -90,15 +100,25 @@ class ShopCard extends Component {
                     <br></br>
                     <Rating />
                     <br></br>
-                <form onSubmit={this.handleSubmitReview}>
-                    <form>
-                        Review
+                    <form onSubmit={this.handleSubmitReview}>
+                        <form>
+                            Review
           <input type="text" value={this.state.value} onChange={this.handleChange} />
+                        </form>
+                        <input type="submit" value="Submit" />
                     </form>
-                    <input type="submit" value="Submit" />
-                </form>
+                    <div className="review-card">
+                        {this.state.reviews.map(review =>
+                            <ShopReviewCard
+                                key={review.id}
+                                review={review}
+                                {...this.props}
+
+                            />
+                        )}
+                    </div>
+                </div>
             </div>
-        </div>
         )
     }
 }

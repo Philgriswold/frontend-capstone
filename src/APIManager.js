@@ -54,8 +54,8 @@ export default {
     return fetch(`${remoteURL}/reviews?_sort=rating&_order=desc`)
         .then(result => result.json())
     },
-    getReview(id) {
-    return fetch(`${remoteURL}/reviews/${id}`)
+    getReview(shopId) {
+    return fetch(`${remoteURL}/reviews?shopId=${shopId}`)
         .then(response => response.json());
     },
     postReview(newReview) {

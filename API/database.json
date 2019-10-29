@@ -142,11 +142,11 @@
     },
     {
       "id": 16,
-      "name": "Benten",
-      "address": "3 Chome-25 Asahicho, 練馬区 Nerima City, Tokyo 179-0071, Japan",
-      "url": "./images/Benten.jpeg",
-      "category": "Shoyu w/ Tonkotsu & Gyokai",
-      "description": "This shop still boasts one of the most brutal lines in Tokyo — a 1-2 hour wait at the door pretty much every day. Nevertheless, this is a must-eat bowl for all serious ramen fans — a cult tsukemen that has influenced the scene for over two decades. Only open for lunch"
+      "name": "Mengyo",
+      "address": "2 Chome-8-8 Kotobashi, Sumida City, Tokyo 130-0022, Japan",
+      "url": "./images/Mengyo.jpeg",
+      "category": "Shio w/ Seabream",
+      "description": "The master makes his soup using dried Tai (Japanese seabream), sourced from the Tsukiji fish market. The soup also contains small morsels of sea bream meat and is topped with negi and yuzu. Low-temperature roasted chashu, smoked with cherry wood, to top it off."
     },
     {
       "id": 17,
@@ -259,15 +259,26 @@
       "url": "./images/Basso.jpeg",
       "category": "Tonkotsu Gyokai w/ Chicken",
       "description": "Master Shinagawa-san operates several shops, all of which are excellent. This flagship located in a quiet residential area near Ikebukuro might be his most respected spot. Handmade noodles and carefully crafted gourmet bowls."
+    },
+    {
+      "id": 31,
+      "name": "Kiraku",
+      "address": "2 Chome-17-6 Dogenzaka, 渋谷区 Shibuya City, Tokyo 150-0043, Japan",
+      "url": "./images/Kiraku.jpeg",
+      "category": "Tokyo style Shoyu",
+      "description": "Saddle up for some old school Tokyo-style shoyu ramen with chewy house-made noodles and dried onions, along with gyoza on the side. Order 'moyashi' if you want your bowl piled with bean sprouts. Wontonmen is available too."
     }
   ],
-  "favorites": [],
-  "reviews": [
+  "favorites": [
     {
       "userId": 1,
-      "shopId": 1,
+      "shopId": 2,
+      "name": "Ramen Gottsu",
+      "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
       "id": 1
-    },
+    }
+  ],
+  "reviews": [
     {
       "userId": 1,
       "shopId": 1,
@@ -291,6 +302,141 @@
       "shopId": 1,
       "value": "hey hey hey hey",
       "id": 5
+    },
+    {
+      "userId": 1,
+      "shopId": 2,
+      "value": "good morning bud",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "shopId": 1,
+      "value": "s;dflkj",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "shopId": 1,
+      "value": "sdlfsldf",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "shopId": 1,
+      "value": "hiya",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "shopId": 1,
+      "value": "",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "shopId": 1,
+      "value": "hello there",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "shopId": 21,
+      "value": "so good",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "shopId": 2,
+      "value": "iulyktf",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "shopId": 2,
+      "value": "iulytyjtdrhsegfdghj",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "tasty",
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "hello",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "",
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "hey guys",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "",
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "",
+      "id": 20
+    },
+    {
+      "id": 21
+    },
+    {
+      "id": 22
+    },
+    {
+      "id": 23
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "",
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "",
+      "id": 25
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "",
+      "id": 26
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "Hello",
+      "id": 27
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "Good Shop",
+      "id": 28
+    },
+    {
+      "userId": 1,
+      "shopId": 27,
+      "value": "",
+      "id": 29
     }
   ]
 }
