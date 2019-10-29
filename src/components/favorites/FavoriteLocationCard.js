@@ -23,7 +23,7 @@ class FavoriteLocationCard extends Component {
         <div className="favoriteShopCard">
         <div className="favoriteLocationCardContent">
         <div className="deleteButtonParent">
-        <button className="deleteButton" onClick={this.handleDelete} >Delete</button>
+        <button className="deleteButton" onClick={this.handleDelete} >x</button>
           </div>
           <div className="shopCardText">
           <h4>{this.props.favoriteLocations.name}</h4>

@@ -272,9 +272,9 @@
   "favorites": [
     {
       "userId": 1,
-      "shopId": 2,
-      "name": "Ramen Gottsu",
-      "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
+      "shopId": 1,
+      "name": "Muginae",
+      "address": "6 Chome-11-10 Minamioi, Shinagawa City, Tokyo 140-0013, Japan",
       "id": 1
     }
   ],
@@ -287,57 +287,9 @@
     },
     {
       "userId": 1,
-      "shopId": 1,
-      "value": "sdlfkjsdklfj",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "shopId": 1,
-      "value": "lskjdlskjdf",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "shopId": 1,
-      "value": "hey hey hey hey",
-      "id": 5
-    },
-    {
-      "userId": 1,
       "shopId": 2,
       "value": "good morning bud",
       "id": 6
-    },
-    {
-      "userId": 1,
-      "shopId": 1,
-      "value": "s;dflkj",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "shopId": 1,
-      "value": "sdlfsldf",
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "shopId": 1,
-      "value": "hiya",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "shopId": 1,
-      "value": "",
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "shopId": 1,
-      "value": "hello there",
-      "id": 11
     },
     {
       "userId": 1,
@@ -437,6 +389,36 @@
       "shopId": 27,
       "value": "",
       "id": 29
+    },
+    {
+      "userId": 1,
+      "shopId": 2,
+      "value": "the best place",
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "shopId": 5,
+      "value": "best spot",
+      "id": 31
+    },
+    {
+      "userId": 1,
+      "shopId": 5,
+      "value": "hey",
+      "id": 32
+    },
+    {
+      "userId": 1,
+      "shopId": 10,
+      "value": "amazing place",
+      "id": 33
+    },
+    {
+      "userId": 1,
+      "shopId": 30,
+      "value": "asasdasd",
+      "id": 34
     }
   ]
 }

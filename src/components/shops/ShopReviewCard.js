@@ -6,14 +6,15 @@ import Rating from 'react-rating'
 import { Form, TextArea } from 'semantic-ui-react'
 
 class ShopReviewCard extends Component {
-    // state = {
-    //     value: [],
-    //     userId: userId,
-    //     shopId: shopId,
-    // }
+    state = {
+        value: [],
+    }
 
-
-
+    
+    handleDelete = (id) => {
+        APIManager.deleteReview(id)
+            .then(() => this.props.getReviewPage(this.props.shopId));
+    }
 
     render() {
         return (
@@ -21,6 +22,8 @@ class ShopReviewCard extends Component {
                 <div className="reviewCard">
                     <h3>
                         {this.props.review.value}</h3>
+                        <button className="deleteButton" onClick={() => this.handleDelete(this.props.review.id)}>Delete</button>
+                        <button className="editButton">Edit</button>
                 </div>
             </>
         )

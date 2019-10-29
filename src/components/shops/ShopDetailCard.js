@@ -19,6 +19,16 @@ class ShopCard extends Component {
         this.setState({ value: event.target.value });
     }
 
+    getReviewPage = (shopId) => {
+        APIManager.getReview(shopId)
+        .then((reviews) => {
+            this.setState({
+                reviews: reviews
+            })
+        })
+    }
+
+
     handleSubmitReview = () => {
         let newReview = {
             userId: parseInt(sessionStorage.getItem("activeUser")),
@@ -98,7 +108,7 @@ class ShopCard extends Component {
                         <button type="button" onClick={() => this.handleFavorite()}>Favorite</button>
                     </div>
                     <br></br>
-                    <Rating />
+                    {/* <Rating /> */}
                     <br></br>
                     <form onSubmit={this.handleSubmitReview}>
                         <form>
@@ -112,6 +122,8 @@ class ShopCard extends Component {
                             <ShopReviewCard
                                 key={review.id}
                                 review={review}
+                                getReviewPage={this.getReviewPage}
+                                shopId={this.props.shopId}
                                 {...this.props}
 
                             />
