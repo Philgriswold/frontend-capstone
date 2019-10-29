@@ -96,13 +96,13 @@ class ShopCard extends Component {
                         (this.props.shops.name)}</span></h3>
                     <h4> <span className="card-address">{
                         (this.props.shops.address)}</span></h4>
-                    <h4> <span className="card-category">{
+                    <h4> <span className="card-category">Style: {
                         (this.props.shops.category)}</span></h4>
                     {/* <div className="card-picture">
                     <img  src={require(`${this.props.shops.url}`)} alt="Ramen Shop" />
                     </div> */}
-                    <h4> <span className="card-description">{
-                        (this.props.shops.description)}</span></h4>
+                    <h5> <span className="card-description">{
+                        (this.props.shops.description)}</span></h5>
                     <div>
                         {/* <Link to={`/shops/${this.props.name.id}`}><button className="detailsBtn">Details</button></Link> */}
                         <button type="button" onClick={() => this.handleFavorite()}>Favorite</button>

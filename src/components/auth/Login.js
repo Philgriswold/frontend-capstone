@@ -62,26 +62,23 @@ class Login extends Component {
     render() {
       return (
         <>
+        <div className="loginPic">
+          <div className="login-wrap">
           {this.state.hideReg && (
-        <form onSubmit={this.handleLogin}>
+        <form className="ui form" onSubmit={this.handleLogin}>
           <fieldset>
             <h3>Please sign in</h3>
-            <div className="field">
+            <div className="formgrid">
                  <label htmlFor="username">Username</label>
                  <input placeholder="Username" onChange={this.handleFieldChange} required="" autoFocus="" id="username" />
             </div>
             <div className="formgrid">
-              <input onChange={this.handleFieldChange} type="email"
-                id="email"
-                placeholder="Email address"
-                required="" autoFocus="" />
-              <label htmlFor="inputEmail">Email address</label>
-  
-              <input onChange={this.handleFieldChange} type="password"
-                id="password"
-                placeholder="Password"
-                required="" />
-              <label htmlFor="inputPassword">Password</label>
+                 <label htmlFor="inputEmail">Email address</label>
+                 <input placeholder="Email address" onChange={this.handleFieldChange} required="" autoFocus=""  id="email" />
+            </div>
+            <div className="formgrid">
+                 <label htmlFor="inputPassword">Password</label>
+                 <input placeholder="Password" onChange={this.handleFieldChange} required="" autoFocus=""  id="password" />
             </div>
             <button type="submit">
               Sign in
@@ -93,6 +90,8 @@ class Login extends Component {
           {!this.state.hideReg && (
       <Register activeUser={this.props.activeUser} setUser={this.props.setUser}hideReg={this.hideReg} />
           )}
+          </div>
+          </div>
       </>
       )
     }

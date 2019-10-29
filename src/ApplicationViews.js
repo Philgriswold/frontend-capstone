@@ -6,6 +6,8 @@ import ShopList from './components/shops/ShopList'
 import ShopDetail from './components/shops/ShopDetail';
 import ShopCard from './components/shops/ShopCard';
 import FavoriteLocationList from './components/favorites/FavoriteLocationList'
+import ShopReviewCard from './components/shops/ShopReviewCard';
+import ShopReviewEditCard from './components/shops/ShopReviewCard'
 
 class ApplicationViews extends Component {
 
@@ -26,6 +28,9 @@ class ApplicationViews extends Component {
               }} />
               <Route path="/favorites" render={(props) => {
                return <FavoriteLocationList activeUser={this.props.activeUser} {...props} {...this.props} />
+              }} />
+              <Route path="/reviews/:reviewId(\d+)/edit" render={(props) => {
+               return <ShopReviewEditCard activeUser={this.props.activeUser} {...props} {...this.props} />
               }} />
             </>
   )

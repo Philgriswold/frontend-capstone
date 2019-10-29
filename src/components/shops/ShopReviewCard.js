@@ -23,7 +23,7 @@ class ShopReviewCard extends Component {
                     <h3>
                         {this.props.review.value}</h3>
                         <button className="deleteButton" onClick={() => this.handleDelete(this.props.review.id)}>Delete</button>
-                        <button className="editButton">Edit</button>
+                        <button type="button" onClick={() => {this.props.history.push(`/reviews/${this.props.review.id}/edit`)}}>Edit</button>
                 </div>
             </>
         )

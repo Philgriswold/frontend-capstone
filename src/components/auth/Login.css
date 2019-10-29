@@ -1,0 +1,35 @@
+.login-wrap{
+    display:flex;
+justify-content: center;
+flex-wrap: wrap;
+align-items: center;
+margin-top: 10em;
+
+
+}
+/* .loginPic{
+    background-image: url("../../images/244608.jpg");
+} */
+.ui.form {
+    border-style: solid;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ui.form 
+
+.formgrid { 
+    align-self:center;
+}
+
+.ui.button {
+    width: 50%;
+    align-self: center;
+    padding: 0.2em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}

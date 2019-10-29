@@ -17,6 +17,12 @@
       "email": "jill@jill.com",
       "password": "l",
       "id": 3
+    },
+    {
+      "username": "bob",
+      "email": "bob@bob.com",
+      "password": "bob",
+      "id": 4
     }
   ],
   "shops": [
@@ -269,15 +275,7 @@
       "description": "Saddle up for some old school Tokyo-style shoyu ramen with chewy house-made noodles and dried onions, along with gyoza on the side. Order 'moyashi' if you want your bowl piled with bean sprouts. Wontonmen is available too."
     }
   ],
-  "favorites": [
-    {
-      "userId": 1,
-      "shopId": 1,
-      "name": "Muginae",
-      "address": "6 Chome-11-10 Minamioi, Shinagawa City, Tokyo 140-0013, Japan",
-      "id": 1
-    }
-  ],
+  "favorites": [],
   "reviews": [
     {
       "userId": 1,
@@ -419,6 +417,12 @@
       "shopId": 30,
       "value": "asasdasd",
       "id": 34
+    },
+    {
+      "userId": 1,
+      "shopId": 7,
+      "value": "hey hey",
+      "id": 35
     }
   ]
 }
