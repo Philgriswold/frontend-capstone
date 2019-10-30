@@ -14,8 +14,12 @@ class ShopDetailCard extends Component {
         reviews: [],
         isEdit: false,
         editId: null,
+        isFavorite: false,
+        favorite: ""
         //  review: "",
     };
+
+    activeUserId = parseInt(sessionStorage.getItem("activeUser"))
 
     handleChange = (event) => {
         this.setState({ value: event.target.value });
@@ -23,11 +27,11 @@ class ShopDetailCard extends Component {
 
     getReviewPage = (shopId) => {
         APIManager.getReview(shopId)
-        .then((reviews) => {
-            this.setState({
-                reviews: reviews
+            .then((reviews) => {
+                this.setState({
+                    reviews: reviews
+                })
             })
-        })
     }
 
     handleEdit = (review, id) => {
@@ -53,21 +57,21 @@ class ShopDetailCard extends Component {
         if (this.state.isEdit) {
             console.log("EDIT MORE: ", this.state.value, this.state.editId);
             APIManager.editReview(newReview, this.state.editId)
-            .then((response) => {
-                console.log("RESPONSE: ", response);
-            })
-            this.setState({ 
+                .then((response) => {
+                    console.log("RESPONSE: ", response);
+                })
+            this.setState({
                 isEdit: false,
                 value: "",
             })
 
         } else {
-             APIManager.postReview(newReview)
-            .then((newReview) => {
-                this.setState({
-                  newReview: newReview
+            APIManager.postReview(newReview)
+                .then((newReview) => {
+                    this.setState({
+                        newReview: newReview
+                    })
                 })
-            })
         }
     }
 
@@ -85,16 +89,28 @@ class ShopDetailCard extends Component {
     }
 
     handleFavorite = () => {
-        console.log("handle")
-        let newFavorite = {
-            userId: parseInt(sessionStorage.getItem("activeUser")),
-            shopId: this.props.shops.id,
-            name: this.props.shops.name,
-            address: this.props.shops.address
-        }
-        APIManager.saveFavorite(newFavorite)
+        //go to the database and fetch the favorite object where the user id is the current user, and the shop id is the current shop
+        //if the length of the response i get back is greater than 0 alert the user that they have already favorited the shop
+        //else do the logic below, i.e. add the new favorite to the database 
+        APIManager.getMyFavorite(parseInt(sessionStorage.getItem("activeUser")), this.props.shops.id)
+            .then((favorite) => {
+                if ((favorite.length > 0)) {
+                    alert("You've already favorited this");
+                }
+                else {
+                    let newFavorite = {
+                        userId: parseInt(sessionStorage.getItem("activeUser")),
+                        shopId: this.props.shops.id,
 
+                    };
+                    APIManager.saveFavorite(newFavorite)
+                    // .then(() => { this.props.getData() }
+                }
+            }
+            )
     }
+
+
     componentDidMount() {
         console.log("shopId", this.props.shopId)
         APIManager.getReview(this.props.shopId)
@@ -108,12 +124,24 @@ class ShopDetailCard extends Component {
                     // description: shop.description,
                     // id: shop.id
                 })
+                APIManager.getMyFavorite(this.activeUserId)
+                    .then(favorites => {
+                        if (favorites.length > 0) {
+                            this.setState({
+                                favorite: favorites,
+                                isFavorite: true,
+                            })
+                        }
+
+                    })
             })
     }
+
     //component did mount get get all reviews based on shopId
     //import reviewCard here make a card for each...
     render() {
         console.log("<---------------------------->", this.props);
+        console.log("favorites in state", this.state.favorite)
         return (
             <div className="card">
                 <div className="card-content">
@@ -130,7 +158,12 @@ class ShopDetailCard extends Component {
                         (this.props.shops.description)}</span></h5>
                     <div>
                         {/* <Link to={`/shops/${this.props.name.id}`}><button className="detailsBtn">Details</button></Link> */}
+                        {/* {this.state.isFavorite !== true ? */}
+                        {/* <> */}
                         <button type="button" onClick={() => this.handleFavorite()}>Favorite</button>
+                        {/* </>
+                        : null
+                    } */}
                     </div>
                     <br></br>
                     {/* <Rating /> */}

@@ -10,6 +10,7 @@ import ShopReviewCard from './components/shops/ShopReviewCard';
 import ShopReviewEditCard from './components/shops/ShopReviewCard'
 
 class ApplicationViews extends Component {
+  
 
     render() {
         return (

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
 import APIManager from '../../APIManager';
 import Register from './Register';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 // import ReactModalLogin from "react-modal-login";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { ifStatement } from '@babel/types';
@@ -65,27 +66,25 @@ class Login extends Component {
         <div className="loginPic">
           <div className="login-wrap">
           {this.state.hideReg && (
-        <form className="ui form" onSubmit={this.handleLogin}>
-          <fieldset>
+        <Form className="ui-form" onSubmit={this.handleLogin}>
             <h3>Please sign in</h3>
-            <div className="formgrid">
-                 <label htmlFor="username">Username</label>
-                 <input placeholder="Username" onChange={this.handleFieldChange} required="" autoFocus="" id="username" />
-            </div>
-            <div className="formgrid">
-                 <label htmlFor="inputEmail">Email address</label>
-                 <input placeholder="Email address" onChange={this.handleFieldChange} required="" autoFocus=""  id="email" />
-            </div>
-            <div className="formgrid">
-                 <label htmlFor="inputPassword">Password</label>
-                 <input placeholder="Password" onChange={this.handleFieldChange} required="" autoFocus=""  id="password" />
-            </div>
-            <button type="submit">
+            <FormGroup className="field">
+                 <Label htmlFor="username">Username</Label>
+                 <Input placeholder="Username" onChange={this.handleFieldChange} required="" autoFocus="" id="username" />
+            </FormGroup>
+            <FormGroup className="field">
+                 <Label htmlFor="inputEmail">Email address</Label>
+                 <Input placeholder="Email address" onChange={this.handleFieldChange} required="" autoFocus=""  id="email" />
+            </FormGroup>
+            <FormGroup className="field">
+                 <Label htmlFor="inputPassword">Password</Label>
+                 <Input placeholder="Password" onChange={this.handleFieldChange} required="" autoFocus=""  id="password" />
+            </FormGroup>
+            <Button type="submit">
               Sign in
-              </button>
+              </Button>
               <p htmlFor="register" onClick={this.showReg}>Not registered? Click here</p>
-           </fieldset>
-        </form>
+        </Form>
           )}
           {!this.state.hideReg && (
       <Register activeUser={this.props.activeUser} setUser={this.props.setUser}hideReg={this.hideReg} />

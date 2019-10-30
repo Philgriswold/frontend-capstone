@@ -11,7 +11,7 @@ margin-top: 10em;
     background-image: url("./images/ramen-lady.jpg");
 }
 
-.ui.form {
+.ui-form {
     border-style: solid;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 60%;
@@ -21,13 +21,7 @@ margin-top: 10em;
     align-items: center;
 }
 
-.ui.form 
-
-.formgrid { 
-    align-self:center;
-}
-
-.ui.button {
+.ui.button .field, h3, span, .ui.button{
     width: 50%;
     align-self: center;
     padding: 0.2em;
