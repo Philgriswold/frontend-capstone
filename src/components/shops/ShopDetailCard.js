@@ -6,12 +6,14 @@ import ShopReviewCard from '../shops/ShopReviewCard'
 import Rating from 'react-rating'
 import { Form, TextArea } from 'semantic-ui-react'
 
-class ShopCard extends Component {
+class ShopDetailCard extends Component {
     state = {
         value: "",
         userId: "",
         shopId: "",
         reviews: [],
+        isEdit: false,
+        editId: null,
         //  review: "",
     };
 
@@ -28,6 +30,16 @@ class ShopCard extends Component {
         })
     }
 
+    handleEdit = (review, id) => {
+        console.log("click", this.handleEdit)
+        this.setState({
+            value: review,
+            isEdit: true,
+            editId: id
+        })
+
+    }
+
 
     handleSubmitReview = () => {
         let newReview = {
@@ -36,14 +48,27 @@ class ShopCard extends Component {
             value: this.state.value
             // review: review
         }
-        APIManager.postReview(newReview)
+
+        //IF state for edit mode 
+        if (this.state.isEdit) {
+            console.log("EDIT MORE: ", this.state.value, this.state.editId);
+            APIManager.editReview(newReview, this.state.editId)
+            .then((response) => {
+                console.log("RESPONSE: ", response);
+            })
+            this.setState({ 
+                isEdit: false,
+                value: "",
+            })
+
+        } else {
+             APIManager.postReview(newReview)
             .then((newReview) => {
                 this.setState({
-                    newReview: newReview
-                }
-                )
-            }
-            )
+                  newReview: newReview
+                })
+            })
+        }
     }
 
     handleSubmit = (event) => {
@@ -88,14 +113,14 @@ class ShopCard extends Component {
     //component did mount get get all reviews based on shopId
     //import reviewCard here make a card for each...
     render() {
-        console.log("here at card", this.props.shops)
+        console.log("<---------------------------->", this.props);
         return (
             <div className="card">
                 <div className="card-content">
                     <h3> <span className="card-shopname">{
                         (this.props.shops.name)}</span></h3>
-                    <h4> <span className="card-address">{
-                        (this.props.shops.address)}</span></h4>
+                    <h4><italic><span className="card-address">{
+                        (this.props.shops.address)}</span></italic></h4>
                     <h4> <span className="card-category">Style: {
                         (this.props.shops.category)}</span></h4>
                     {/* <div className="card-picture">
@@ -120,8 +145,10 @@ class ShopCard extends Component {
                     <div className="review-card">
                         {this.state.reviews.map(review =>
                             <ShopReviewCard
+                                handleEdit={this.handleEdit}
                                 key={review.id}
                                 review={review}
+                                reviewId={review.id}
                                 getReviewPage={this.getReviewPage}
                                 shopId={this.props.shopId}
                                 {...this.props}
@@ -135,4 +162,4 @@ class ShopCard extends Component {
     }
 }
 
-export default ShopCard;
+export default ShopDetailCard;

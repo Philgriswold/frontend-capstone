@@ -7,9 +7,10 @@ margin-top: 10em;
 
 
 }
-/* .loginPic{
-    background-image: url("../../images/244608.jpg");
-} */
+.loginPic{
+    background-image: url("./images/ramen-lady.jpg");
+}
+
 .ui.form {
     border-style: solid;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

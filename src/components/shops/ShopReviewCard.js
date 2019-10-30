@@ -8,23 +8,46 @@ import { Form, TextArea } from 'semantic-ui-react'
 class ShopReviewCard extends Component {
     state = {
         value: [],
+        myReview: '',
     }
 
-    
+    componentDidMount() {
+        if (
+            parseInt(sessionStorage.getItem('activeUser')) ===
+            this.props.review.userId
+        ) {
+            this.setState({
+                myReview: false
+            });
+        } else {
+            this.setState(
+                {
+                    myReview: true
+                },
+            );
+        }
+    }
+
     handleDelete = (id) => {
         APIManager.deleteReview(id)
             .then(() => this.props.getReviewPage(this.props.shopId));
     }
 
     render() {
+        console.log("REVIEW CHECK", this.props.review);
         return (
             <>
-                <div className="reviewCard">
+                {this.state.myReview ? (<div className="reviewCard">
+                    <h3>
+                        {this.props.review.value}</h3></div>
+
+                ) : (<div className="reviewCard">
                     <h3>
                         {this.props.review.value}</h3>
-                        <button className="deleteButton" onClick={() => this.handleDelete(this.props.review.id)}>Delete</button>
-                        <button type="button" onClick={() => {this.props.history.push(`/reviews/${this.props.review.id}/edit`)}}>Edit</button>
+                    <button className="deleteButton" onClick={() => this.handleDelete(this.props.reviewId)}>Delete</button>
+                    <button type="button" onClick={() => { this.props.handleEdit(this.props.review.value, this.props.reviewId) }}>Edit</button>
                 </div>
+                    )}
             </>
         )
     }

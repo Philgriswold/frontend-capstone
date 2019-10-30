@@ -10,7 +10,7 @@ class ShopCard extends Component {
         .then(() => this.props.getData());
     }
 render() {
-    console.log("here at card",this.props.shops)
+    console.log("here at card",this.props)
     return (
         <div className="card">
             <div className="card-content">

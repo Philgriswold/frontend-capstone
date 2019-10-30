@@ -18,7 +18,7 @@ class ShopDetail extends Component {
     componentDidMount() {
         APIManager.getShopById(this.props.match.params.shopId)
             .then((shop) => {
-                console.log(shop)
+                console.log("GET SHOP BY ID:", shop)
                 this.setState({
                     shop: shop
                     // name: shop.name,
@@ -27,11 +27,12 @@ class ShopDetail extends Component {
                     // description: shop.description,
                     // id: shop.id
                 })
+
             })
     }
 
     render() {
-        console.log("ShopDetail")
+        console.log("ShopDetail--------------------------", this.props)
         return (
             <>
                 <div className="card-detail">

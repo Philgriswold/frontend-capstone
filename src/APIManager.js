@@ -75,8 +75,9 @@ export default {
         })
         .then(response => response.json())
     },
-    editReview(editedReview) {
-    return fetch(`${remoteURL}/reviews/${editedReview.id}`, {
+    editReview(editedReview, id) {
+        console.log("editedReview", editedReview, id)
+    return fetch(`${remoteURL}/reviews/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
