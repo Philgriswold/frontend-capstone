@@ -34,9 +34,10 @@ export default {
             })
     },
     getMyFavorite(userId, shopId) {
-        // http://localhost:3002/favorites?userId=1&shopId=4
-
         return fetch(`${remoteURL}/favorites?userId=${userId}&shopId=${shopId}`).then(response => response.json());
+    },
+    getMyFavoriteShops(userId, shopId) {
+        return fetch(`${remoteURL}/favorites?userId=${userId}&shopId=${shopId}&_expand=shop`).then(response => response.json());
     },
     saveFavorite(favorite) {
         return fetch(`${remoteURL}/favorites/`,
