@@ -16,6 +16,7 @@ class ShopDetailCard extends Component {
         editId: null,
         isFavorite: false,
         favorite: ""
+        isLoading: true,
         //  review: "",
     };
 
@@ -101,6 +102,8 @@ class ShopDetailCard extends Component {
                     let newFavorite = {
                         userId: parseInt(sessionStorage.getItem("activeUser")),
                         shopId: this.props.shops.id,
+                        name: this.props.shops.name,
+                        address: this.props.shops.name
 
                     };
                     APIManager.saveFavorite(newFavorite)
@@ -118,6 +121,7 @@ class ShopDetailCard extends Component {
                 console.log("value", value)
                 this.setState({
                     reviews: value
+                    isLoading: false,
                     // name: shop.name,
                     // address: shop.address,
                     // category: shop.category,
@@ -151,9 +155,9 @@ class ShopDetailCard extends Component {
                         (this.props.shops.address)}</span></italic></h4>
                     <h4> <span className="card-category">Style: {
                         (this.props.shops.category)}</span></h4>
-                    {/* <div className="card-picture">
-                    <img  src={require(`${this.props.shops.url}`)} alt="Ramen Shop" />
-                    </div> */}
+                    <div className="card-picture">
+                    {this.state.isLoading === false ?<img  src={require(`${this.props.shops.url}`)} alt="Ramen Shop" />:null
+                    </div>
                     <h5> <span className="card-description">{
                         (this.props.shops.description)}</span></h5>
                     <div>

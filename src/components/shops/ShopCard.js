@@ -19,7 +19,7 @@ render() {
                 <h4><span className="card-address">{
                 (this.props.shops.address)}</span></h4>
                 <div className="card-picture">
-                <img  src={require(`${this.props.shops.url}`)} alt="Ramen Shop" />
+                <img  className="shopsimage" src={require(`${this.props.shops.url}`)} alt="Ramen Shop" />
                 </div>
                 <div>
                 {/* <Link to={`/shops/${this.props.name.id}`}><button className="detailsBtn">Details</button></Link> */}
