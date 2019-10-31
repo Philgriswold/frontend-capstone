@@ -6,6 +6,7 @@ class FavoriteLocationCard extends Component {
     state = {
         location: {},
         url: {},
+        isLoading: true,
     }
    
     handleDelete = (id) => {
@@ -29,9 +30,9 @@ class FavoriteLocationCard extends Component {
           <h4>{this.props.favoriteLocations.name}</h4>
           <p>{this.props.favoriteLocations.address}</p>
           </div>
-          {/* <div className="card-picture">
-                <img  src={require(`${this.state.shops.url}`)} alt="Ramen Shop" />
-                </div> */}
+          <div className="card-picture">
+          {this.state.isLoading === false ?<img  src={this.props.shops.url} alt="Ramen Shop" />:null}
+                </div>
           <div>
           {/* <button type="button" onClick={() => this.handleFavorite()}>Favorite</button> */}
           {/* <Link to={`/shops/${this.props.favoriteLocations.shopId}`}><button className="favDeleteButton">Delete</button></Link> */}

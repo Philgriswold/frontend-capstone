@@ -15,7 +15,8 @@ class ShopDetailCard extends Component {
         isEdit: false,
         editId: null,
         isFavorite: false,
-        favorite: ""
+        favorite: "",
+        isLoading: true,
         //  review: "",
     };
 
@@ -96,11 +97,13 @@ class ShopDetailCard extends Component {
             .then((favorite) => {
                 if ((favorite.length > 0)) {
                     alert("You've already favorited this");
-                }
+                } //for favorite, map over it and get the name and address related to shopId.. inside the .then of getMyFavorite
                 else {
                     let newFavorite = {
                         userId: parseInt(sessionStorage.getItem("activeUser")),
                         shopId: this.props.shops.id,
+                        name: this.props.shops.name,
+                        address: this.props.shops.address
 
                     };
                     APIManager.saveFavorite(newFavorite)
@@ -117,7 +120,8 @@ class ShopDetailCard extends Component {
             .then((value) => {
                 console.log("value", value)
                 this.setState({
-                    reviews: value
+                    reviews: value,
+                    isLoading: false,
                     // name: shop.name,
                     // address: shop.address,
                     // category: shop.category,
@@ -143,17 +147,17 @@ class ShopDetailCard extends Component {
         console.log("<---------------------------->", this.props);
         console.log("favorites in state", this.state.favorite)
         return (
-            <div className="card">
-                <div className="card-content">
+            <div className="detail-card">
+                <div className="detailcard-content">
                     <h3> <span className="card-shopname">{
                         (this.props.shops.name)}</span></h3>
                     <h4><italic><span className="card-address">{
                         (this.props.shops.address)}</span></italic></h4>
                     <h4> <span className="card-category">Style: {
                         (this.props.shops.category)}</span></h4>
-                    {/* <div className="card-picture">
-                    <img  src={require(`${this.props.shops.url}`)} alt="Ramen Shop" />
-                    </div> */}
+                    <div className="card-picture">
+                    {this.state.isLoading === false ?<img  src={this.props.shops.url} alt="Ramen Shop" />:null}
+                    </div>
                     <h5> <span className="card-description">{
                         (this.props.shops.description)}</span></h5>
                     <div>
