@@ -29,6 +29,66 @@
       "email": "o@o.com",
       "password": "o",
       "id": 5
+    },
+    {
+      "username": "n",
+      "email": "n@n.com",
+      "password": "n",
+      "id": 6
+    },
+    {
+      "username": "b",
+      "email": "b@b.com",
+      "password": "b",
+      "id": 7
+    },
+    {
+      "username": "v",
+      "email": "v@v.com",
+      "password": "v",
+      "id": 8
+    },
+    {
+      "username": "c",
+      "email": "c@c.com",
+      "password": "c",
+      "id": 9
+    },
+    {
+      "username": "x",
+      "email": "x@x.com",
+      "password": "x",
+      "id": 10
+    },
+    {
+      "username": "s",
+      "email": "s@s.com",
+      "password": "s",
+      "id": 11
+    },
+    {
+      "username": "bill",
+      "email": "bill@bill.com",
+      "password": "bill",
+      "id": 12
+    },
+    {
+      "username": "brassmonkey",
+      "email": "sethoak@gmail.com",
+      "password": "drowssap",
+      "id": 13
+    },
+    {
+      "username": "brenda",
+      "email": "brenda@brenda.com",
+      "password": "asd",
+      "id": 14
+    },
+    {
+      "username": "quin",
+      "email": "quin@quin.com",
+      "password": "sss",
+      "id": 15
     }
   ],
   "shops": [
@@ -305,15 +365,7 @@
       "description": "The shop has an old-school feel and the ramen is simple and comforting — a clear shoyu with medium depth, served with onions and simple toppings. Canned beer and chu-hi are also on the menu."
     }
   ],
-  "favorites": [
-    {
-      "userId": 1,
-      "shopId": 1,
-      "name": "Muginae",
-      "address": "6 Chome-11-10 Minamioi, Shinagawa City, Tokyo 140-0013, Japan",
-      "id": 1
-    }
-  ],
+  "favorites": [],
   "reviews": [
     {
       "userId": 1,
