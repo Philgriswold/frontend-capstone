@@ -394,12 +394,6 @@
       "shopId": 1,
       "value": "hello there",
       "id": 8
-    },
-    {
-      "userId": 1,
-      "shopId": 2,
-      "value": "so so good",
-      "id": 9
     }
   ]
 }
