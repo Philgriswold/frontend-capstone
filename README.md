@@ -13,7 +13,7 @@
 3. Have a details button take the user to a page with a detailed description, a favorites button, and a review button.
 4. Allow the favorites button to save the favorites page.
 5. Have the review button allow the user to write, save, and edit a review.
-6. Have a logout button take the user to a landing page.
+6. Have a logout button take the user back to the landing page.
 
 
 ### User Stories
