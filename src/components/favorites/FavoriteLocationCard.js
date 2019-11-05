@@ -34,17 +34,19 @@ class FavoriteLocationCard extends Component {
     return (
       <div>
 
-        <div className="favoriteShopCard">
+        <div className="favoriteLocationCard">
         <div className="favoriteLocationCardContent">
         <div className="deleteButtonParent">
-        <button className="deleteButton" onClick={this.handleDelete} >x</button>
+        <button className="favoriteDeleteButton" onClick={this.handleDelete} >x</button>
           </div>
-          <div className="shopCardText">
-          <h4>{this.props.favoriteLocations.name}</h4>
+          <div className="favlocation-name">
+          <h2>{this.props.favoriteLocations.name}</h2>
+          </div>
+          {/* <div className="favlocation-address">
           <p>{this.props.favoriteLocations.address}</p>
-          </div>
-          <div className="card-picture">
-          {this.state.isLoading === false ?<img  src={`../../../${this.state.url}`} alt="Ramen Shop" />:null}
+          </div> */}
+          <div className="favcard-picture">
+          {this.state.isLoading === false ?<img className="favcard-img"  src={`../../../${this.state.url}`} alt="Ramen Shop" />:null}
                 </div>
           <div>
           {/* <button type="button" onClick={() => this.handleFavorite()}>Favorite</button> */}

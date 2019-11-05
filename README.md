@@ -1,70 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## "The Ramenator" by Phil Griswold
 
-## Available Scripts
+"The Ramenator" is an app for Ramen lovers who are planning a trip to or are already located in Tokyo, Japan.  Because Tokyo has tens of thousands of Ramen shops, this app narrows down the selection to the best of the best for the user.  It gives the user the name, address, style, and a short description of each shop and then allows the user to record their thoughts about each shop after they've visited it.  The user may also add select shops to a "favorites" page on the app.
 
-In the project directory, you can run:
+### Technology used
 
-### `npm start`
+"The Ramenator" uses React, reactstrap, and bootstrap technologies.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### MVP
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Have a user able to login or register on a landing page.
+2. Have a homepage that would display various Ramen shops on cards with a details button.
+3. Have a details button take the user to a page with a detailed description, a favorites button, and a review button.
+4. Allow the favorites button to save the favorites page.
+5. Have the review button allow the user to write, save, and edit a review.
+6. Have a logout button take the user back to the landing page...
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Stories
 
-### `npm run build`
+- As a lover of Ramen, I want someone to narrow down an otherwise endless selection of shops to a small list of "must visits".
+- I want to be able to login existing users or register new users.
+- I want an app to lure me in with pictures and then provide me a button to click that will allow me to see more details about a shop.
+- I want the details of shop to include name, address, style, and a short description.
+- I want to be able to record my thoughts regarding each shop that I can then edit or delete using my own discretion.
+- I want to be able to favorite certain shop locations that I may want to revisit and I also want to be able delete them in case I change my mind. 
+- I want to be able to logout at any time and it take me back to the landing page.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify]
-
-![heyyy](./images/ERD.png)
+![heyyy](./images/ERD2.png)

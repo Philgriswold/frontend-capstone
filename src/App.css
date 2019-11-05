@@ -1,3 +1,8 @@
+body {
+  background-color: lightgoldenrodyellow;
+  /* background-image: url("../src/components/auth/images/dude-at-shop.jpg"); */
+}
+
 .App {
   text-align: center;
 }
@@ -17,6 +22,74 @@
   color: white;
 }
 
+.shopCardButton {
+  margin-top: 10px;
+  background-color: coral;
+    border-color: coral;
+    border-radius: 0.5em;
+    font-family: 'Courier New', sans-serif;
+    font-size: 17px !important;
+    font-style: bold;
+    color: white !important;
+    width: 90px;
+    height: 40px;
+    margin-left: 14px;
+    /* padding-right: 1px; */
+    align-content: center;
+    margin-right: 12px;
+}
+
+.favoriteButton {
+  margin-top: 10px;
+  background-color: coral;
+    border-color: coral;
+    border-radius: 0.5em;
+    font-family: 'Courier New', sans-serif;
+    font-size: 17px !important;
+    font-style: bold;
+    color: white !important;
+    width: 90px;
+    height: 40px;
+    margin-left: 14px;
+    /* padding-right: 1px; */
+    align-content: center;
+    margin-right: 12px;
+}
+
+.detailSubmitButton {
+  margin-top: 10px;
+  background-color: burlywood;
+    border-color: burlywood;
+    border-radius: 0.5em;
+    font-family: 'Courier New', sans-serif;
+    font-size: 17px !important;
+    font-style: bold;
+    color: white !important;
+    width: 90px;
+    height: 40px;
+    margin-left: 14px;
+    /* padding-right: 1px; */
+    align-content: center;
+    margin-right: 12px;
+}
+
+.favoriteDeleteButton {
+  margin-top: 10px;
+  background-color: coral;
+    border-color: coral;
+    border-radius: 0.5em;
+    font-family: 'Courier New', sans-serif;
+    font-size: 17px !important;
+    font-style: bold;
+    color: white !important;
+    width: 90px;
+    height: 40px;
+    margin-left: 14px;
+    /* padding-right: 1px; */
+    align-content: center;
+    margin-right: 12px;
+}
+
 .App-link {
   color: #09d3ac;
 }
@@ -34,12 +107,96 @@
   background-position: 10% 10%;
   background-repeat: no-repeat;
   background-size: cover;
+  /* border-style: solid; */
 }
 
+.card-address {
+  color: coral;
+  /* margin-right : 5em;
+  padding-left: 2px;  */
+}
+
+.card-shopname {
+  font-family: 'Courier New', sans-serif;
+}
+
+.detailcard-shopname {
+  font-family: 'Courier New', sans-serif;
+}
+
+.favlocation-name {
+  font-family: 'Courier New', sans-serif;
+}
+
+.detailcard-address {
+  color: coral;
+}
+
+.detailcard-category {
+  color: burlywood;
+}
 .card:hover {
-  box-shadow: 0 20px 40px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 200px 400px 0 rgba(0,0,0,0.2);
 }
 
+.detailcard-content {
+  padding-top: 1%;
+  padding-bottom: 5%;
+  padding-right: 4%;
+  padding-left: 4%;
+  border-style: solid;
+}
+
+.detailcard-content:hover {
+  box-shadow: 0 200px 400px 0 rgba(0,0,0,0.2);
+}
+
+.favoriteLocationCard:hover {
+  box-shadow: 0 200px 400px 0 rgba(0,0,0,0.2);
+}
+
+.favoriteLocationCard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; 
+  background: aliceblue;
+  margin-bottom: 3em;
+  margin-right: 2em;
+  margin-left: 1em;
+  flex: 0 1 10%;
+  width: 90%;
+  width: 335px;
+  height: 450px;
+  background-position: 10% 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: row;
+}
+
+.favoriteLocationCardContent {
+  margin-right: 5%;
+  margin-left : 5%;
+}
+
+.shopCardContainer {
+  display: flex;
+  justify-content: row;
+}
+
+/* .favoriteLocationCard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; 
+  background: aliceblue;
+  margin-bottom: 2em;
+  flex: 0 1 24%;
+  width: 40%;
+} */
+
+.detailcard-img {
+  border-style: solid;
+}
 /* .card-content:hover {
   box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
 } */
@@ -63,18 +220,16 @@
 
 .detail-card {
   background-color: aliceblue;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-bottom: 20%;
 }
 
-
-.favoriteShopCard {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px; 
-  background: aliceblue;
-  margin-bottom: 2em;
-  flex: 0 1 24%;
-  width: 40%;
+.detailcard-category {
+  font-style: italic;
+  font-style: bold;
 }
+
 .cardpicture-container {
   /* display: flex;
   width: 100%;
@@ -85,20 +240,39 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+ 
 }
 
 .card-container { 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 1em 2em;
+  /* padding: 1em 2em; */
   width: 100%;
   height: 100%;
   margin: 0 auto;
+
 } 
 
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-/* .card-content {
+/* .textArea {
+  padding-top: 3em;
+  padding-bottom: 2em;
+  padding-right: 3em;
+  padding-left: 3em;
+} */
+
+/* .shareYourThoughts {
+  padding-bottom: 1em;
+} */
+
+/* 
+.card-content {
   display: flex; 
   align-items: center;  
   background-color: rgb(241,241,241);

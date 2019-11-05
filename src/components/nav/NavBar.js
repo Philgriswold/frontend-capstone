@@ -14,7 +14,7 @@ class NavBar extends Component {
     render(){
         return (
           <header>
-            <h1 className="site-title">The Ramenator</h1>
+            <img className="siteHeader" src={"../../images/ramenatorlogo.png"} alt="ramenator logo" />
             <h2 className="site-jptitle"><strong>ザー・ラーメンアートー</strong></h2>
             <nav>
               <ul className="container">

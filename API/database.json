@@ -29,6 +29,66 @@
       "email": "o@o.com",
       "password": "o",
       "id": 5
+    },
+    {
+      "username": "n",
+      "email": "n@n.com",
+      "password": "n",
+      "id": 6
+    },
+    {
+      "username": "b",
+      "email": "b@b.com",
+      "password": "b",
+      "id": 7
+    },
+    {
+      "username": "v",
+      "email": "v@v.com",
+      "password": "v",
+      "id": 8
+    },
+    {
+      "username": "c",
+      "email": "c@c.com",
+      "password": "c",
+      "id": 9
+    },
+    {
+      "username": "x",
+      "email": "x@x.com",
+      "password": "x",
+      "id": 10
+    },
+    {
+      "username": "s",
+      "email": "s@s.com",
+      "password": "s",
+      "id": 11
+    },
+    {
+      "username": "bill",
+      "email": "bill@bill.com",
+      "password": "bill",
+      "id": 12
+    },
+    {
+      "username": "brassmonkey",
+      "email": "sethoak@gmail.com",
+      "password": "drowssap",
+      "id": 13
+    },
+    {
+      "username": "brenda",
+      "email": "brenda@brenda.com",
+      "password": "asd",
+      "id": 14
+    },
+    {
+      "username": "quin",
+      "email": "quin@quin.com",
+      "password": "sss",
+      "id": 15
     }
   ],
   "shops": [
@@ -50,7 +110,7 @@
     },
     {
       "id": 3,
-      "name": "Chuka Soba Tomita Ramen",
+      "name": "Tommita Ramen",
       "address": "Japan, 〒271-0092 Chiba, Matsudo, 1339 高橋ビル",
       "url": "/images/Tomita.jpeg",
       "category": "Tonkotsu Gyokai Tsukemen",
@@ -59,7 +119,7 @@
     {
       "id": 4,
       "name": "Konjiki Hototogisu",
-      "address": "Japan, 〒160-0022 Tokyo, Shinjuku City, Shinjuku, 2 Chome−4−1 第２２宮庭マンション 1F",
+      "address": "Japan, 〒160-0022 Tokyo, Shinjuku City, Shinjuku, 2 Chome−4−1 第",
       "url": "/images/Hototogisu.jpeg",
       "category": "Shio & Shoyu w/ Hamaguri Clams",
       "description": "The soup is a light, clear triple blend of Hamaguri clams, sea bream and dried gyokai (sea ingredients). On top of the bowls come extravagances like porcini mushroom duxelles sauce, golden inca berry sauce, white truffle oil and pancetta bacon bits. Noodles are homemade in the shop using six types of flour. "
@@ -131,7 +191,7 @@
     {
       "id": 13,
       "name": "Uchoku",
-      "address": "Japan, 〒167-0032 Tokyo, Suginami City, Amanuma, 3 Chome−10−16-102 迂直",
+      "address": "Japan, 〒167-0032 Tokyo, Suginami City, Amanuma, 3 Chome−10−16-102",
       "url": "/images/Uchoku.jpeg",
       "category": "Shoyu Tsukemen",
       "description": "With one of the finest bowls of tsukemen in all of the land, Michi is an esteemed stop on the Tokyo scene. The double soup is made with chicken, tonkotsu and gyokai, and it's surprisingly silkier and smoother than many of the other top-level shops of the same genre."
@@ -195,7 +255,7 @@
     {
       "id": 21,
       "name": "Rage",
-      "address": "3 Chome-37-22 Shoan, Suginami City, Tokyo 167-0054, Japan",
+      "address": "3 Chome-37-22 Shoan, Suginami City, Tokyo",
       "url": "/images/Rage.jpeg",
       "category": "Shoyu w/ Chicken or Niboshi",
       "description": "Rage's master, a young, friendly dude named Hirota-san, offers three bowls: shamo soba, (a chicken-based shoyu ramen, also known as tori-soba), niboshi ramen and maze-soba. Rage's shamo soba soup is made with two types of shoyu — ki-joyuu and kaeshi — and four types of shamo chicken."
@@ -203,7 +263,7 @@
     {
       "id": 22,
       "name": "Shibasakitei",
-      "address": "3 Chome-25-52 Nishitsutsujigaoka, Chofu, Tokyo 182-0006, Japan",
+      "address": "3 Chome-25-52 Nishitsutsujigaoka, Chofu, Tokyo",
       "url": "/images/Shibasakitei.jpg",
       "category": "Shio & Shoyu w/ Niboshi, Chicken & Vegetables",
       "description": "The noodles are straight and presented ever so carefully. A broad, thin slice of chashu, menma, and some fresh Japanese mitsuba leaves finish the bowl. The soup is a sheer delight and only gets better as you delve deeper into the dish — potent, smooth niboshi, such a unique and pleasant taste. "
@@ -211,7 +271,7 @@
     {
       "id": 23,
       "name": "Shichisai",
-      "address": "2 Chome-13-2 Hatchobori, Chuo City, Tokyo 104-0032, Japan",
+      "address": "2 Chome-13-2 Hatchobori, Chuo City, Tokyo",
       "url": "/images/Shichisai.jpg",
       "category": "Kitakata-style Shoyu",
       "description": "The soup is on par with the best Kitakata ramen in town — a light, crisp shoyu, with an almost acidic twang to it. Negi, menma and luscious juicy chashu top it off. But it's really all about the noodles here. The “teuchi temomimen” pounding technique gives them a slightly broad, wavy shape."
@@ -259,7 +319,7 @@
     {
       "id": 29,
       "name": "Tetsu",
-      "address": "Japan, 〒108-0074 Tokyo, Minato City, Takanawa, 3 Chome−２６−20 品達ラーメン麺達七人衆",
+      "address": "Japan, 〒108-0074 Tokyo, Minato City, Takanawa, 3 Chome−２６−20",
       "url": "/images/Tetsu.jpeg",
       "category": "Tonkotsu Gyokai",
       "description": "One of Tokyo's original great tonkotsu gyokai tsukemen shops, in its heyday Tetsu's line stretched hours deep daily, as patrons waited patiently to slurp down a thick, viscous pork bone and seafood-based soup. "
@@ -283,7 +343,7 @@
     {
       "id": 32,
       "name": "Nonokura",
-      "address": "Japan, 〒125-0061 Tokyo, Katsushika City, Kameari, 3 Chome−11−11 マーベラス亀有ビル 1F",
+      "address": "Japan, 〒125-0061 Tokyo, Katsushika City, Kameari, 3 Chome−11−11",
       "url": "/images/Nonokura.jpeg",
       "category": "Shio and Shoyu",
       "description": "Nonokura's soup stock contains whole chicken carcasses, chicken meat, four types of niboshi and kombu. The thick teuchi style noodles are made fresh every day by master Shirakaiwa-san, who trained at the well known shop Ikaruga for seven years. "
@@ -303,30 +363,26 @@
       "url": "/images/Kaotan.jpeg",
       "category": "Tokyo-style Shoyu w/ Onions",
       "description": "The shop has an old-school feel and the ramen is simple and comforting — a clear shoyu with medium depth, served with onions and simple toppings. Canned beer and chu-hi are also on the menu."
-    }
-  ],
-  "favorites": [
+    },
     {
-      "userId": 1,
-      "shopId": 1,
-      "name": "Muginae",
-      "address": "6 Chome-11-10 Minamioi, Shinagawa City, Tokyo 140-0013, Japan",
-      "id": 1
+      "id": 35,
+      "name": "Kazuki",
+      "address": "3-10-11 Roppongi, Minato-ku, Tokyo 東京都港区六本木3-10-11 青木ビル 1F",
+      "url": "/images/Kazuki.jpeg",
+      "category": "Tokyo-style",
+      "description": "Not particularly renowned during daylight hours but known on the late-night circuit for years amongst party heads, Kazuki serves Tokyo-style shoyu ramen laden with seabura (pork back fat). The recommend bowl is the seabura spicy miso or the seabura shoyu."
+    },
+    {
+      "id": 36,
+      "name": "Shinbusakiya",
+      "address": "2-10-3 Dogenzaka, Shibuya-ku, Tokyo 東京都渋谷区道玄坂2-10-3",
+      "url": "/images/Shinbusakiya.jpeg",
+      "category": "Sapporo Miso",
+      "description": "Shinbusakiya serves a very respectable bowl of Sapporo-style miso ramen, right in the heart of Shibuya. This shop isn’t going to win any awards, but if you want miso after midnight in central Tokyo this is your spot. "
     }
   ],
+  "favorites": [],
   "reviews": [
-    {
-      "userId": 1,
-      "shopId": 3,
-      "value": "asldfkjsdklfj",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "shopId": 3,
-      "value": "hello there",
-      "id": 6
-    },
     {
       "userId": 1,
       "shopId": 1,

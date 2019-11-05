@@ -1,4 +1,4 @@
-.login-wrap{
+/* .login-wrap{
     display:flex;
 justify-content: center;
 flex-wrap: wrap;
@@ -27,4 +27,51 @@ margin-top: 10em;
     padding: 0.2em;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
+} */
+
+  
+.loginPic {
+    display:flex;
+justify-content: center;
+flex-wrap: wrap;
+align-items: center;
+margin-top: 10em;
+
+
+}
+
+.ui.form {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    margin: 14em;
+    background-color: white;
+}
+
+.ui.form .field, h3, span, .ui.button{
+    width: 50%;
+    align-self: center;
+    padding: 0.2em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+.login-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-login{
+    width: 34%;
+    height: 10%;
+    align-self: flex-start;
+}
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0.5em;
+}
+.login-section {
+    background-color:   #F2CEA7  ;
 }
