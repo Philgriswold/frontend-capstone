@@ -94,7 +94,7 @@
   "shops": [
     {
       "id": 1,
-      "name": "MUGINAE",
+      "name": "Muginae",
       "address": "6 Chome-11-10 Minamioi, Shinagawa City, Tokyo 140-0013, Japan",
       "url": "/images/Muginae.jpeg",
       "category": "Shoyu with Chicken",
@@ -102,7 +102,7 @@
     },
     {
       "id": 2,
-      "name": "RAMEN GOTTSU",
+      "name": "Ramen Gottsu",
       "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
       "url": "/images/Gottsu.jpeg",
       "category": "Tonkotsu & Gyokai Double Soup",
@@ -110,7 +110,7 @@
     },
     {
       "id": 3,
-      "name": "CHUKA SOBA TOMITA RAMEN",
+      "name": "Chuka Soba Tommita Ramen",
       "address": "Japan, 〒271-0092 Chiba, Matsudo, 1339 高橋ビル",
       "url": "/images/Tomita.jpeg",
       "category": "Tonkotsu Gyokai Tsukemen",
@@ -118,7 +118,7 @@
     },
     {
       "id": 4,
-      "name": "KONJIKI HOTOTOGISU",
+      "name": "Konjiki Hototogisu",
       "address": "Japan, 〒160-0022 Tokyo, Shinjuku City, Shinjuku, 2 Chome−4−1 第２２宮庭マンション 1F",
       "url": "/images/Hototogisu.jpeg",
       "category": "Shio & Shoyu w/ Hamaguri Clams",
@@ -365,28 +365,8 @@
       "description": "The shop has an old-school feel and the ramen is simple and comforting — a clear shoyu with medium depth, served with onions and simple toppings. Canned beer and chu-hi are also on the menu."
     }
   ],
-  "favorites": [
-    {
-      "userId": 1,
-      "shopId": 2,
-      "name": "RAMEN GOTTSU",
-      "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
-      "id": 1
-    }
-  ],
+  "favorites": [],
   "reviews": [
-    {
-      "userId": 1,
-      "shopId": 3,
-      "value": "asldfkjsdklfj",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "shopId": 3,
-      "value": "hello there",
-      "id": 6
-    },
     {
       "userId": 1,
       "shopId": 1,

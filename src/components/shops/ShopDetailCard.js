@@ -159,7 +159,7 @@ class ShopDetailCard extends Component {
                     <div className="detailcard-picture">
                     {this.state.isLoading === false ?<img  className="detailcard-img" src={this.props.shops.url} alt="Ramen Shop" />:null}
                     </div>
-                    <h5> <span className="detailcard-description">{
+                    <h5><span className="detailcard-description">{
                         (this.props.shops.description)}</span></h5>
                     <div>
                         {/* <Link to={`/shops/${this.props.name.id}`}><button className="detailsBtn">Details</button></Link> */}
