@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // import { firstLetterCase } from '../../modules/helpers'
 import APIManager from '../../APIManager';
 import ShopReviewCard from '../shops/ShopReviewCard'
+import { Label, Input } from 'reactstrap'
 import Rating from 'react-rating'
 import { Form, TextArea } from 'semantic-ui-react'
 
@@ -149,10 +150,10 @@ class ShopDetailCard extends Component {
         return (
             <div className="detail-card">
                 <div className="detailcard-content">
-                    <h3> <span className="detailcard-shopname">{
-                        (this.props.shops.name)}</span></h3>
-                    <h4><italic><span className="detailcard-address">{
-                        (this.props.shops.address)}</span></italic></h4>
+                    <h2> <span className="detailcard-shopname">{
+                        (this.props.shops.name)}</span></h2>
+                    <h5><italic><span className="detailcard-address">{
+                        (this.props.shops.address)}</span></italic></h5>
                     <h4> <span className="detailcard-category">Style: {
                         (this.props.shops.category)}</span></h4>
                     <div className="detailcard-picture">
@@ -173,12 +174,26 @@ class ShopDetailCard extends Component {
                     {/* <Rating /> */}
                     <br></br>
                     <form onSubmit={this.handleSubmitReview}>
+                        <Label>
+                            <br></br>
+                            <p className="shareYourThoughts">
+                            <strong>Please share your thoughts about this shop!</strong>
+                            </p>
+                            <br></br>
+          <Input type="textarea" className="textArea" value={this.state.value} onChange={this.handleChange} />
+                            <br></br>
+                        </Label>
+                        <p>
+                        <input type="submit" value="Submit" />
+                        </p>
+                    </form>
+                    {/* <form onSubmit={this.handleSubmitReview}>
                         <form>
                             Review
           <input type="text" value={this.state.value} onChange={this.handleChange} />
                         </form>
                         <input type="submit" value="Submit" />
-                    </form>
+                    </form> */}
                     <div className="review-card">
                         {this.state.reviews.map(review =>
                             <ShopReviewCard

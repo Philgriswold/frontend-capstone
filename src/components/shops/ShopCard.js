@@ -14,10 +14,10 @@ render() {
     return (
         <div className="card">
             <div className="card-content">
-                <h3> <span className="card-shopname">{
-                (this.props.shops.name)}</span></h3>
-                <h4><span className="card-address">{
-                (this.props.shops.address)}</span></h4>
+                <h2> <span className="card-shopname">{
+                (this.props.shops.name)}</span></h2>
+                <h5><span className="card-address">{
+                (this.props.shops.address)}</span></h5>
                 <div className="card-picture">
                 <img  className="shopsimage" src= {this.props.shops.url} alt="Ramen Shop" />
                 </div>

@@ -94,7 +94,7 @@
   "shops": [
     {
       "id": 1,
-      "name": "Muginae",
+      "name": "MUGINAE",
       "address": "6 Chome-11-10 Minamioi, Shinagawa City, Tokyo 140-0013, Japan",
       "url": "/images/Muginae.jpeg",
       "category": "Shoyu with Chicken",
@@ -110,7 +110,7 @@
     },
     {
       "id": 3,
-      "name": "Chuka Soba Tomita Ramen",
+      "name": "CHUKA SOBA TOMITA RAMEN",
       "address": "Japan, 〒271-0092 Chiba, Matsudo, 1339 高橋ビル",
       "url": "/images/Tomita.jpeg",
       "category": "Tonkotsu Gyokai Tsukemen",
@@ -368,17 +368,10 @@
   "favorites": [
     {
       "userId": 1,
-      "shopId": 2,
-      "name": "Ramen Gottsu",
-      "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
+      "shopId": 1,
+      "name": "MUGINAE",
+      "address": "6 Chome-11-10 Minamioi, Shinagawa City, Tokyo 140-0013, Japan",
       "id": 1
-    },
-    {
-      "userId": 1,
-      "shopId": 3,
-      "name": "Chuka Soba Tomita Ramen",
-      "address": "Japan, 〒271-0092 Chiba, Matsudo, 1339 高橋ビル",
-      "id": 2
     }
   ],
   "reviews": [
@@ -409,14 +402,8 @@
     {
       "userId": 1,
       "shopId": 2,
-      "value": "sdfsdf",
+      "value": "hi",
       "id": 9
-    },
-    {
-      "userId": 1,
-      "shopId": 2,
-      "value": "sdfsdf",
-      "id": 10
     }
   ]
 }
