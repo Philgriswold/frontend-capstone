@@ -1,3 +1,7 @@
+body {
+  background-image: url("../src/components/auth/images/tree.jpg");
+}
+
 .App {
   text-align: center;
 }
@@ -15,6 +19,74 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.shopCardButton {
+  margin-top: 10px;
+  background-color: coral;
+    border-color: coral;
+    border-radius: 0.5em;
+    font-family: 'Courier New', sans-serif;
+    font-size: 17px !important;
+    font-style: bold;
+    color: white !important;
+    width: 90px;
+    height: 40px;
+    margin-left: 14px;
+    /* padding-right: 1px; */
+    align-content: center;
+    margin-right: 12px;
+}
+
+.favoriteButton {
+  margin-top: 10px;
+  background-color: coral;
+    border-color: coral;
+    border-radius: 0.5em;
+    font-family: 'Courier New', sans-serif;
+    font-size: 17px !important;
+    font-style: bold;
+    color: white !important;
+    width: 90px;
+    height: 40px;
+    margin-left: 14px;
+    /* padding-right: 1px; */
+    align-content: center;
+    margin-right: 12px;
+}
+
+.detailSubmitButton {
+  margin-top: 10px;
+  background-color: burlywood;
+    border-color: burlywood;
+    border-radius: 0.5em;
+    font-family: 'Courier New', sans-serif;
+    font-size: 17px !important;
+    font-style: bold;
+    color: white !important;
+    width: 90px;
+    height: 40px;
+    margin-left: 14px;
+    /* padding-right: 1px; */
+    align-content: center;
+    margin-right: 12px;
+}
+
+.favoriteDeleteButton {
+  margin-top: 10px;
+  background-color: coral;
+    border-color: coral;
+    border-radius: 0.5em;
+    font-family: 'Courier New', sans-serif;
+    font-size: 17px !important;
+    font-style: bold;
+    color: white !important;
+    width: 90px;
+    height: 40px;
+    margin-left: 14px;
+    /* padding-right: 1px; */
+    align-content: center;
+    margin-right: 12px;
 }
 
 .App-link {
@@ -36,6 +108,31 @@
   background-size: cover;
 }
 
+.card-address {
+  color: coral;
+  /* margin-right : 5em;
+  padding-left: 2px;  */
+}
+
+.card-shopname {
+  font-family: 'Courier New', sans-serif;
+}
+
+.detailcard-shopname {
+  font-family: 'Courier New', sans-serif;
+}
+
+.favlocation-name {
+  font-family: 'Courier New', sans-serif;
+}
+
+.detailcard-address {
+  color: coral;
+}
+
+.detailcard-category {
+  color: burlywood;
+}
 .card:hover {
   box-shadow: 0 20px 40px 0 rgba(0,0,0,0.2);
 }
@@ -67,7 +164,7 @@
   flex: 0 1 10%;
   width: 90%;
   width: 335px;
-  height: 400px;
+  height: 450px;
   background-position: 10% 10%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -130,6 +227,7 @@
 
 .detailcard-category {
   font-style: italic;
+  font-style: bold;
 }
 
 .cardpicture-container {
@@ -161,12 +259,12 @@
   flex-direction: column;
 }
 
-.textArea {
+/* .textArea {
   padding-top: 3em;
   padding-bottom: 2em;
   padding-right: 3em;
   padding-left: 3em;
-}
+} */
 
 /* .shareYourThoughts {
   padding-bottom: 1em;

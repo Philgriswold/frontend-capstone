@@ -102,7 +102,7 @@
     },
     {
       "id": 2,
-      "name": "Ramen Gottsu",
+      "name": "RAMEN GOTTSU",
       "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
       "url": "/images/Gottsu.jpeg",
       "category": "Tonkotsu & Gyokai Double Soup",
@@ -118,7 +118,7 @@
     },
     {
       "id": 4,
-      "name": "Konjiki Hototogisu",
+      "name": "KONJIKI HOTOTOGISU",
       "address": "Japan, 〒160-0022 Tokyo, Shinjuku City, Shinjuku, 2 Chome−4−1 第２２宮庭マンション 1F",
       "url": "/images/Hototogisu.jpeg",
       "category": "Shio & Shoyu w/ Hamaguri Clams",
@@ -368,9 +368,9 @@
   "favorites": [
     {
       "userId": 1,
-      "shopId": 1,
-      "name": "MUGINAE",
-      "address": "6 Chome-11-10 Minamioi, Shinagawa City, Tokyo 140-0013, Japan",
+      "shopId": 2,
+      "name": "RAMEN GOTTSU",
+      "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
       "id": 1
     }
   ],
@@ -402,7 +402,7 @@
     {
       "userId": 1,
       "shopId": 2,
-      "value": "hi",
+      "value": "so so good",
       "id": 9
     }
   ]

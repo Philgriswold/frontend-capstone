@@ -23,7 +23,7 @@ render() {
                 </div>
                 <div>
                 {/* <Link to={`/shops/${this.props.name.id}`}><button className="detailsBtn">Details</button></Link> */}
-                <button type="button" onClick={() => {this.props.history.push(`/details/${this.props.shops.id}`)}}>Details</button>
+                <button className="shopCardButton" type="button" onClick={() => {this.props.history.push(`/details/${this.props.shops.id}`)}}>Details</button>
                 </div>
              </div>
         </div>

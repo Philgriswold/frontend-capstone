@@ -150,12 +150,12 @@ class ShopDetailCard extends Component {
         return (
             <div className="detail-card">
                 <div className="detailcard-content">
-                    <h2> <span className="detailcard-shopname">{
-                        (this.props.shops.name)}</span></h2>
+                    <h1> <span className="detailcard-shopname">{
+                        (this.props.shops.name)}</span></h1>
                     <h5><italic><span className="detailcard-address">{
                         (this.props.shops.address)}</span></italic></h5>
-                    <h4> <span className="detailcard-category">Style: {
-                        (this.props.shops.category)}</span></h4>
+                    <h3> <span className="detailcard-category"><strong>Style: {
+                        (this.props.shops.category)}</strong></span></h3>
                     <div className="detailcard-picture">
                     {this.state.isLoading === false ?<img  className="detailcard-img" src={this.props.shops.url} alt="Ramen Shop" />:null}
                     </div>
@@ -165,7 +165,7 @@ class ShopDetailCard extends Component {
                         {/* <Link to={`/shops/${this.props.name.id}`}><button className="detailsBtn">Details</button></Link> */}
                         {/* {this.state.isFavorite !== true ? */}
                         {/* <> */}
-                        <button type="button" onClick={() => this.handleFavorite()}>Favorite</button>
+                        <button className="favoriteButton" type="button" onClick={() => this.handleFavorite()}>Favorite</button>
                         {/* </>
                         : null
                     } */}
@@ -184,7 +184,7 @@ class ShopDetailCard extends Component {
                             <br></br>
                         </Label>
                         <p>
-                        <input type="submit" value="Submit" />
+                        <input className="detailSubmitButton" type="submit" value="Submit" />
                         </p>
                     </form>
                     {/* <form onSubmit={this.handleSubmitReview}>
