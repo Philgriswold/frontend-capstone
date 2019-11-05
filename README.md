@@ -4,7 +4,7 @@
 
 ### Technology used
 
-"The Ramenator" uses React, reactstrap, and bootstrap technologies
+"The Ramenator" uses React, reactstrap, and bootstrap technologies.
 
 ### MVP
 
