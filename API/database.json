@@ -365,7 +365,22 @@
       "description": "The shop has an old-school feel and the ramen is simple and comforting — a clear shoyu with medium depth, served with onions and simple toppings. Canned beer and chu-hi are also on the menu."
     }
   ],
-  "favorites": [],
+  "favorites": [
+    {
+      "userId": 1,
+      "shopId": 2,
+      "name": "Ramen Gottsu",
+      "address": "1 Chome-29-16 Nerima, Nerima City, Tokyo 176-0001, Japan",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "shopId": 3,
+      "name": "Chuka Soba Tomita Ramen",
+      "address": "Japan, 〒271-0092 Chiba, Matsudo, 1339 高橋ビル",
+      "id": 2
+    }
+  ],
   "reviews": [
     {
       "userId": 1,
@@ -390,6 +405,18 @@
       "shopId": 1,
       "value": "hello there",
       "id": 8
+    },
+    {
+      "userId": 1,
+      "shopId": 2,
+      "value": "sdfsdf",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "shopId": 2,
+      "value": "sdfsdf",
+      "id": 10
     }
   ]
 }

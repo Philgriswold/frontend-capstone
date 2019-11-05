@@ -149,16 +149,16 @@ class ShopDetailCard extends Component {
         return (
             <div className="detail-card">
                 <div className="detailcard-content">
-                    <h3> <span className="card-shopname">{
+                    <h3> <span className="detailcard-shopname">{
                         (this.props.shops.name)}</span></h3>
-                    <h4><italic><span className="card-address">{
+                    <h4><italic><span className="detailcard-address">{
                         (this.props.shops.address)}</span></italic></h4>
-                    <h4> <span className="card-category">Style: {
+                    <h4> <span className="detailcard-category">Style: {
                         (this.props.shops.category)}</span></h4>
-                    <div className="card-picture">
-                    {this.state.isLoading === false ?<img  src={this.props.shops.url} alt="Ramen Shop" />:null}
+                    <div className="detailcard-picture">
+                    {this.state.isLoading === false ?<img  className="detailcard-img" src={this.props.shops.url} alt="Ramen Shop" />:null}
                     </div>
-                    <h5> <span className="card-description">{
+                    <h5> <span className="detailcard-description">{
                         (this.props.shops.description)}</span></h5>
                     <div>
                         {/* <Link to={`/shops/${this.props.name.id}`}><button className="detailsBtn">Details</button></Link> */}
