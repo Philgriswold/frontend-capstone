@@ -63,24 +63,25 @@ class Login extends Component {
     render() {
       return (
         <>
-        <section className="loginPic">
-          <div className="login-wrap">
+        <div className="authWrapper">
+          <section>
+          <div className="authWrap">
           {this.state.hideReg && (
-        <Form className="ui-form" onSubmit={this.handleLogin}>
+        <Form className="authForm" onSubmit={this.handleLogin}>
             <h3>Please sign in</h3>
             <FormGroup className="field">
-                 <Label htmlFor="username">Username</Label>
+                 <Label htmlFor="username"></Label>
                  <Input placeholder="Username" onChange={this.handleFieldChange} required="" autoFocus="" id="username" />
             </FormGroup>
             <FormGroup className="field">
-                 <Label htmlFor="inputEmail">Email address</Label>
+                 <Label htmlFor="inputEmail"></Label>
                  <Input placeholder="Email address" onChange={this.handleFieldChange} required="" autoFocus=""  id="email" />
             </FormGroup>
             <FormGroup className="field">
-                 <Label htmlFor="inputPassword">Password</Label>
+                 <Label htmlFor="inputPassword"></Label>
                  <Input placeholder="Password" onChange={this.handleFieldChange} required="" autoFocus=""  id="password" />
             </FormGroup>
-            <Button type="submit">
+            <Button type="submit" className="loginSubmitButton">
               Sign in
               </Button>
               <p htmlFor="register" onClick={this.showReg}>Not registered? Click here</p>
@@ -91,6 +92,7 @@ class Login extends Component {
           )}
           </div>
           </section>
+          </div>
       </>
       )
     }

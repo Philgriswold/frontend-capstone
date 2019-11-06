@@ -1,6 +1,6 @@
 body {
   background-color: lightgoldenrodyellow;
-  /* background-image: url("../src/components/auth/images/dude-at-shop.jpg"); */
+  /* background-image: url("../src/components/auth/images/hasegawa.jpeg"); */
 }
 
 .App {
@@ -259,6 +259,86 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+html {
+  background-image: url("../src/components/auth/images/dude-at-shop.jpg");
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center; 
+  
+}
+  
+.authWrapper {
+display:flex;
+justify-content: center;
+flex-wrap: wrap;
+align-items: center; 
+margin-top: 1em;
+background-image: url("../src/components/auth/images/dude-at-shop.jpg");
+
+
+}
+
+.authForm {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+  /* margin: 1px; */
+  background-color: lightgoldenrodyellow;
+  padding-right: 2em;
+  padding-left: 2em;
+  padding-top: 0em;
+  padding-bottom: 2em;
+}
+
+
+.authForm .field, h3, span, .ui.button{
+  width: 100%;
+  align-self: center;
+  /* padding: 0.2em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em; */
+}
+
+.loginSubmitButton {
+  width: 50%;
+  align-self: center;
+  padding: 0.2em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.registerSubmitButton {
+  width: 45%;
+  align-self: center;
+  padding: 0.2em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.authWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-login{
+  width: 34%;
+  height: 10%;
+  align-self: flex-start;
+}
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0.5em;
+}
+.login-section {
+  background-color:   #F2CEA7  ;
+}
+
+
 
 /* .textArea {
   padding-top: 3em;

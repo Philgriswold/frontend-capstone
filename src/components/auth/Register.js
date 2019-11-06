@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom"
 import APIManager from '../../APIManager';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
 class Register extends Component {
     state = {
@@ -47,26 +48,34 @@ class Register extends Component {
     render() {
         return  (
             <>
-            <form className="register form" onSubmit={this.handleRegister}>
+            <div className="authWrapper">
+                <section>
+                <div className="authWrap">
+            <Form className="authForm" onSubmit={this.handleRegister}>
                 <h3>Register</h3>
-                <div className="field">
-                      <label htmlFor="userName">Username</label>
-                      <input placeholder="Username" onChange={this.handleFieldChange} required="" autoFocus="" id="username" />
-                </div>
-                <div className="register field">
-                    <label htmlFor="email">Email Address</label>
-                    <input placeholder="Email Address" onChange={this.handleFieldChange} required="" autoFocus="" id="email" />
-                </div>
-                <div className="register field">
-                    <label htmlFor="password">Password</label>
-                    <input placeholder="Password" onChange={this.handleFieldChange} type="password" required="" autoFocus="" id="password" />
-                </div><div className="register field">
-                    <label htmlFor="password">Confirm Password</label>
-                    <input placeholder="Confirm Password" onChange={this.handleFieldChange} type="password" required="" autoFocus="" id="confirmpassword" />
-                </div>
-                <button type="submit" className="register button" >Submit</button>
-            </form>
-            <p onClick={this.props.hideReg}>Already have an account? Click to sign in</p>
+                <FormGroup className="field">
+                      <Label htmlFor="userName"></Label>
+                      <Input placeholder="Username" onChange={this.handleFieldChange} required="" autoFocus="" id="username" />
+                </FormGroup>
+                <FormGroup className="field">
+                    <Label htmlFor="email"></Label>
+                    <Input placeholder="Email Address" onChange={this.handleFieldChange} required="" autoFocus="" id="email" />
+                </FormGroup>
+                <FormGroup className="field">
+                    <Label htmlFor="password"></Label>
+                    <Input placeholder="Password" onChange={this.handleFieldChange} type="password" required="" autoFocus="" id="password" />
+                </FormGroup>
+                <FormGroup className="field">
+                    <Label htmlFor="password"></Label>
+                    <Input placeholder="Confirm Password" onChange={this.handleFieldChange} type="password" required="" autoFocus="" id="confirmpassword" />
+                </FormGroup>
+                <button type="submit" className="registerSubmitButton" >Submit</button>
+                <p onClick={this.props.hideReg}>Already have an account? Click to sign in</p>
+            </Form>
+           
+            </div>
+            </section>
+            </div>
             </>
         )
     }
