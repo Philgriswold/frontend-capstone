@@ -63,7 +63,7 @@ class Login extends Component {
     render() {
       return (
         <>
-        <div className="loginPic">
+        <section className="loginPic">
           <div className="login-wrap">
           {this.state.hideReg && (
         <Form className="ui-form" onSubmit={this.handleLogin}>
@@ -90,7 +90,7 @@ class Login extends Component {
       <Register activeUser={this.props.activeUser} setUser={this.props.setUser}hideReg={this.hideReg} />
           )}
           </div>
-          </div>
+          </section>
       </>
       )
     }

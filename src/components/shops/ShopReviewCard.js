@@ -45,7 +45,7 @@ class ShopReviewCard extends Component {
                     <h3>
                         {this.props.review.value}</h3>
                     <button className="deleteButton" onClick={() => this.handleDelete(this.props.reviewId)}>Delete</button>
-                    <button type="button" onClick={() => { this.props.handleEdit(this.props.review.value, this.props.reviewId) }}>Edit</button>
+                    <button type="editButton" onClick={() => { this.props.handleEdit(this.props.review.value, this.props.reviewId) }}>Edit</button>
                 </div>
                     )}
             </>

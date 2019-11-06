@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // import { firstLetterCase } from '../../modules/helpers'
 import APIManager from '../../APIManager';
 import ShopReviewCard from '../shops/ShopReviewCard'
+import { Label, Input } from 'reactstrap'
 import Rating from 'react-rating'
 import { Form, TextArea } from 'semantic-ui-react'
 
@@ -15,7 +16,7 @@ class ShopDetailCard extends Component {
         isEdit: false,
         editId: null,
         isFavorite: false,
-        favorite: ""
+        favorite: "",
         isLoading: true,
         //  review: "",
     };
@@ -96,14 +97,14 @@ class ShopDetailCard extends Component {
         APIManager.getMyFavorite(parseInt(sessionStorage.getItem("activeUser")), this.props.shops.id)
             .then((favorite) => {
                 if ((favorite.length > 0)) {
-                    alert("You've already favorited this");
-                }
+                    alert("You've already favorited this sweetie");
+                } //for favorite, map over it and get the name and address related to shopId.. inside the .then of getMyFavorite
                 else {
                     let newFavorite = {
                         userId: parseInt(sessionStorage.getItem("activeUser")),
                         shopId: this.props.shops.id,
                         name: this.props.shops.name,
-                        address: this.props.shops.name
+                        address: this.props.shops.address
 
                     };
                     APIManager.saveFavorite(newFavorite)
@@ -120,7 +121,7 @@ class ShopDetailCard extends Component {
             .then((value) => {
                 console.log("value", value)
                 this.setState({
-                    reviews: value
+                    reviews: value,
                     isLoading: false,
                     // name: shop.name,
                     // address: shop.address,
@@ -147,24 +148,24 @@ class ShopDetailCard extends Component {
         console.log("<---------------------------->", this.props);
         console.log("favorites in state", this.state.favorite)
         return (
-            <div className="card">
-                <div className="card-content">
-                    <h3> <span className="card-shopname">{
-                        (this.props.shops.name)}</span></h3>
-                    <h4><italic><span className="card-address">{
-                        (this.props.shops.address)}</span></italic></h4>
-                    <h4> <span className="card-category">Style: {
-                        (this.props.shops.category)}</span></h4>
-                    <div className="card-picture">
-                    {this.state.isLoading === false ?<img  src={require(`${this.props.shops.url}`)} alt="Ramen Shop" />:null
+            <div className="detail-card">
+                <div className="detailcard-content">
+                    <h1> <span className="detailcard-shopname">{
+                        (this.props.shops.name)}</span></h1>
+                    <h5><italic><span className="detailcard-address">{
+                        (this.props.shops.address)}</span></italic></h5>
+                    <h3> <span className="detailcard-category"><strong>Style: {
+                        (this.props.shops.category)}</strong></span></h3>
+                    <div className="detailcard-picture">
+                    {this.state.isLoading === false ?<img  className="detailcard-img" src={this.props.shops.url} alt="Ramen Shop" />:null}
                     </div>
-                    <h5> <span className="card-description">{
+                    <h5><span className="detailcard-description">{
                         (this.props.shops.description)}</span></h5>
                     <div>
                         {/* <Link to={`/shops/${this.props.name.id}`}><button className="detailsBtn">Details</button></Link> */}
                         {/* {this.state.isFavorite !== true ? */}
                         {/* <> */}
-                        <button type="button" onClick={() => this.handleFavorite()}>Favorite</button>
+                        <button className="favoriteButton" type="button" onClick={() => this.handleFavorite()}>Favorite</button>
                         {/* </>
                         : null
                     } */}
@@ -173,12 +174,26 @@ class ShopDetailCard extends Component {
                     {/* <Rating /> */}
                     <br></br>
                     <form onSubmit={this.handleSubmitReview}>
+                        <Label>
+                            <br></br>
+                            <p className="shareYourThoughts">
+                            <strong>Please share your thoughts about this shop!</strong>
+                            </p>
+                            <br></br>
+          <Input type="textarea" className="textArea" value={this.state.value} onChange={this.handleChange} />
+                            <br></br>
+                        </Label>
+                        <p>
+                        <input className="detailSubmitButton" type="submit" value="Submit" />
+                        </p>
+                    </form>
+                    {/* <form onSubmit={this.handleSubmitReview}>
                         <form>
                             Review
           <input type="text" value={this.state.value} onChange={this.handleChange} />
                         </form>
                         <input type="submit" value="Submit" />
-                    </form>
+                    </form> */}
                     <div className="review-card">
                         {this.state.reviews.map(review =>
                             <ShopReviewCard
