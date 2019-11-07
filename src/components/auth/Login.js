@@ -86,10 +86,13 @@ class Login extends Component {
               </Button>
               <p htmlFor="register" onClick={this.showReg}>Not registered? Click here</p>
         </Form>
-          )}
+         )}
           {!this.state.hideReg && (
       <Register activeUser={this.props.activeUser} setUser={this.props.setUser}hideReg={this.hideReg} />
           )}
+          <div>
+         <img className="authImage" src="../images/ramenatorlogo.png" alt="site logo" />
+         </div>
           </div>
           </section>
           </div>

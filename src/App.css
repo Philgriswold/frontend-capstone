@@ -213,6 +213,12 @@ body {
   height: 300px;
 }
 
+.favcard-img {
+  width: 300px;
+  height: 300px;
+}
+
+
 .card-address {
   margin: 10px 30px 20px 30px;
   text-decoration: underline;
@@ -260,24 +266,35 @@ body {
   align-items: center;
 }
 
-html {
-  background-image: url("../src/components/auth/images/dude-at-shop.jpg");
+/* html {
+  background-size: 25% ;
+  background-position-x: center;
   display:flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center; 
-  
-}
+  align-items: column; 
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: burlywood;
+  margin-top: 1px;
+} */
   
 .authWrapper {
 display:flex;
 justify-content: center;
 flex-wrap: wrap;
 align-items: center; 
-margin-top: 1em;
-background-image: url("../src/components/auth/images/dude-at-shop.jpg");
+/* margin-top: 1em; */
+background-repeat: no-repeat;
+background-position: center;
+background-color: burlywood;
+}
 
-
+.authImage {
+    width: 450px;
+    height: 400px;
+    margin-top: 50px;
+    /* margin-bottom: -45px; */
 }
 
 .authForm {
@@ -292,6 +309,7 @@ background-image: url("../src/components/auth/images/dude-at-shop.jpg");
   padding-left: 2em;
   padding-top: 0em;
   padding-bottom: 2em;
+  border-radius: 1%;
 }
 
 
@@ -304,7 +322,7 @@ background-image: url("../src/components/auth/images/dude-at-shop.jpg");
 }
 
 .loginSubmitButton {
-  width: 50%;
+  width: 30%;
   align-self: center;
   padding: 0.2em;
   margin-top: 0.3em;
@@ -319,10 +337,10 @@ background-image: url("../src/components/auth/images/dude-at-shop.jpg");
   margin-bottom: 0.3em;
 }
 
-.authWrap {
+/* .authWrap {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .logo-login{
   width: 34%;
