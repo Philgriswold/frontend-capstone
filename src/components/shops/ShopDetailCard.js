@@ -97,7 +97,7 @@ class ShopDetailCard extends Component {
         APIManager.getMyFavorite(parseInt(sessionStorage.getItem("activeUser")), this.props.shops.id)
             .then((favorite) => {
                 if ((favorite.length > 0)) {
-                    alert("You've already favorited this sweetie");
+                    alert("You already favorited this sweetie");
                 } //for favorite, map over it and get the name and address related to shopId.. inside the .then of getMyFavorite
                 else {
                     let newFavorite = {
